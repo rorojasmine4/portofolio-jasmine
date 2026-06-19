@@ -1,11 +1,525 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roro Jasmine Setyoningsih | IT Programmer</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Professional portfolio of Roro Jasmine Setyoningsih | IT Developer, UI/UX, and Database Administration." />
+    <meta name="theme-color" content="#d8a5c4" />
+    <title>Roro Jasmine Setyoningsih | Portfolio</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaFJ0n1y7Hn2wPWfqTrffEvlVgKxkxvZMoZhg8RtjCB4/cu2uDVy7Z8Qbsw" crossorigin="anonymous" />
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.4/css/all.min.css" integrity="sha512-pgk6m8F4Lh7FA7jp0c6g2+HQz4YVrVYP0qgV3zRDWklVqqGmjD0ZLlSG4iIjL2b6QKhs4UPeC+KXZxjE2+nUJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Devicon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    
+    <header class="sticky-top shadow-sm bg-white">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+            <div class="container">
+                <a class="navbar-brand fs-5 fw-bold text-pink" href="#home">PORTOFOLIO</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+                        <li class="nav-item"><a class="nav-link active" href="#home"><span data-i18n="nav-home">Home</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about"><span data-i18n="nav-about">About</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projects"><span data-i18n="nav-projects">Projects</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#education"><span data-i18n="nav-education">Education</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#skills"><span data-i18n="nav-skills">Skills</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#certificates"><span data-i18n="nav-certificates">Certificates</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#tools"><span data-i18n="nav-tools">Tools</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact"><span data-i18n="nav-contact">Contact</span></a></li>
+                        <li class="nav-item ms-3 d-flex align-items-center">
+                            <div class="btn-group" role="group" aria-label="Language switcher">
+                                <button type="button" class="btn btn-outline-pink btn-sm active-lang" data-lang="en">EN</button>
+                                <button type="button" class="btn btn-outline-pink btn-sm" data-lang="id">ID</button>
+                            </div>
+                        </li>
+                        <li class="nav-item ms-3">
+                            <button id="shareButton" class="btn btn-outline-pink btn-sm text-pink">
+                                <i class="fas fa-share-alt me-2"></i><span data-i18n="share-button">Share</span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero-section py-5">
+            <div class="container">
+                <div class="row align-items-center gy-4">
+                    <div class="col-lg-6 order-lg-1 text-center text-lg-start">
+                        <p class="text-uppercase text-muted letter-spacing mb-2" data-i18n="hero-tagline">Professional Portfolio</p>
+                        <h1 class="display-5 fw-bold mb-3">RORO JASMINE SETYONINGSIH</h1>
+                        <p class="lead text-secondary mb-4" data-i18n="hero-description">Mahasiswi Sistem Informasi yang berfokus pada solusi digital profesional, pengembangan platform, dan manajemen basis data.</p>
+                        <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
+                            <a href="assets/CV_RoroJasmine.pdf" class="btn btn-pink btn-lg" target="_blank" rel="noreferrer noopener"><i class="fas fa-download me-2"></i><span data-i18n="cta-download">Download CV</span></a>
+                            <a href="https://rorojasminesetyoningsih.vercel.app" class="btn btn-outline-pink btn-lg" target="_blank" rel="noreferrer noopener"><i class="fas fa-globe me-2"></i><span data-i18n="cta-live">Visit Live Site</span></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 text-center">
+                        <div class="hero-card shadow-sm rounded-4 overflow-hidden mx-auto">
+                            <img src="assets/roro.jpeg" alt="Roro Jasmine Setyoningsih" class="img-fluid rounded-4" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section-bg py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-5 mb-4 mb-lg-0">
+                        <div class="card border-0 shadow-sm rounded-4 p-4 h-100">
+                            <h2 class="h4 text-pink mb-3" data-i18n="about-title">About Me</h2>
+                            <p class="text-secondary" data-i18n="about-p1">Saya adalah mahasiswi S1 Sistem Informasi di Universitas Bina Sarana Informatika Kampus Karawang dengan fokus pada integrasi teknologi dan manajemen data. Saya memiliki pengalaman nyata dalam membangun platform digital seperti MYsems.my.id — sebuah sistem manajemen acara sekolah yang dirancang untuk meningkatkan kolaborasi, perencanaan, dan pelaporan.</p>
+                            <p class="text-secondary" data-i18n="about-p2">Sebagai profesional muda, saya mahir dalam perancangan diagram sistem seperti UML (Use Case, Activity Diagram, dll.), ERD, dan LRD. Saya juga memiliki pemahaman yang kuat sebagai Database Administrator dengan pengalaman di DDL dan DML, serta kompetensi dalam teknologi Laravel, HTML, CSS, Bootstrap, JavaScript, Python, MySQL, dan ekosistem pengembangan web terkait.</p>
+                            <p class="text-secondary mb-0" data-i18n="about-p3">Saya selalu berusaha menghadirkan solusi digital yang terstruktur, estetis, dan dapat diandalkan untuk memenuhi kebutuhan bisnis dan pendidikan.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="info-card p-4 rounded-4 shadow-sm h-100 bg-white">
+                                    <h3 class="h6 text-uppercase text-muted mb-3" data-i18n="focus-title">Professional focus</h3>
+                                    <p class="mb-0 text-secondary" data-i18n="focus-text">Platform digital, manajemen data, dan pemodelan sistem yang akurat.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="info-card p-4 rounded-4 shadow-sm h-100 bg-white">
+                                    <h3 class="h6 text-uppercase text-muted mb-3" data-i18n="expertise-title">Technical expertise</h3>
+                                    <p class="mb-0 text-secondary" data-i18n="expertise-text">Laravel, Bootstrap, JavaScript, Python, MySQL, dan desain UX/UI.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="info-card p-4 rounded-4 shadow-sm h-100 bg-white">
+                                    <h3 class="h6 text-uppercase text-muted mb-3" data-i18n="database-title">Database administration</h3>
+                                    <p class="mb-0 text-secondary" data-i18n="database-text">Perencanaan dan validasi struktur data menggunakan ERD dan LRD.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="info-card p-4 rounded-4 shadow-sm h-100 bg-white">
+                                    <h3 class="h6 text-uppercase text-muted mb-3" data-i18n="collaboration-title">Creative collaboration</h3>
+                                    <p class="mb-0 text-secondary" data-i18n="collaboration-text">Pendekatan desain yang responsif, profesional, dan terukur.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-5">
+            <div class="container">
+                <div class="section-header text-center mb-5">
+                    <span class="badge rounded-pill bg-pink-soft text-pink mb-3" data-i18n="projects-badge">Featured Project</span>
+                    <h2 class="fw-bold" data-i18n="projects-title">My Projects</h2>
+                    <p class="text-secondary mx-auto mb-0" style="max-width: 680px;" data-i18n="projects-description">Project unggulan yang menunjukkan kemampuan saya dalam merancang sistem, mengelola database, dan menciptakan pengalaman pengguna yang intuitif.</p>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="card border-0 shadow-sm rounded-4 p-4 bg-white">
+                            <div class="row g-4 align-items-center">
+                                <div class="col-md-4 text-center">
+                                    <div class="project-badge rounded-circle bg-pink-soft d-inline-flex align-items-center justify-content-center mb-3" style="width: 120px; height: 120px;">
+                                        <i class="fas fa-school fa-2x text-pink"></i>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <h3 class="h4 mb-2" data-i18n="project-name">MYsems.my.id</h3>
+                                    <p class="text-secondary mb-3" data-i18n="project-details">School Event Management System yang dirancang untuk memudahkan perencanaan, koordinasi, dan pelaporan acara pendidikan. Platform ini mendukung pengelolaan kegiatan sekolah dengan dashboard intuitif, data manajemen peserta, dan proses validasi acara yang terstruktur.</p>
+                                    <div class="mb-3">
+                                        <span class="badge bg-light text-pink border border-pink me-2">Laravel</span>
+                                        <span class="badge bg-light text-pink border border-pink me-2">Bootstrap</span>
+                                        <span class="badge bg-light text-pink border border-pink me-2">MySQL</span>
+                                        <span class="badge bg-light text-pink border border-pink">JavaScript</span>
+                                    </div>
+                                    <a href="https://mysems.my.id" class="btn btn-outline-pink btn-sm" target="_blank" rel="noreferrer noopener"><i class="fas fa-external-link-alt me-2"></i><span data-i18n="project-button">Visit Project</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section-bg py-5">
+            <div class="container">
+                <div class="section-header text-center mb-5">
+                    <span class="badge rounded-pill bg-pink-soft text-pink mb-3">Education</span>
+                    <h2 class="fw-bold">Academic Journey</h2>
+                    <p class="text-secondary mx-auto mb-0" style="max-width: 680px;">Perjalanan pendidikan yang mendasari kompetensi teknis saya dalam sistem informasi dan pengembangan digital.</p>
+                </div>
+                <div class="row justify-content-center g-4">
+                    <div class="col-md-6">
+                        <div class="timeline-card card border-0 shadow-sm rounded-4 p-4 bg-white h-100">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="timeline-dot bg-pink me-3"></div>
+                                <div>
+                                    <h3 class="h5 mb-1">SMK Negeri 1 Karawang</h3>
+                                    <small class="text-muted">2021 - 2024</small>
+                                </div>
+                            </div>
+                            <p class="text-secondary mb-0">Pendidikan menengah kejuruan yang memperkuat dasar teknis dalam pemrograman, manajemen data, dan layanan teknologi informasi.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="timeline-card card border-0 shadow-sm rounded-4 p-4 bg-white h-100">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="timeline-dot bg-pink me-3"></div>
+                                <div>
+                                    <h3 class="h5 mb-1">S1 Universitas Bina Sarana Informatika</h3>
+                                    <small class="text-muted">2024 - Present</small>
+                                </div>
+                            </div>
+                            <p class="text-secondary mb-0">Program studi Sistem Informasi yang berfokus pada teknologi digital, analisis sistem, dan manajemen informasi berkualitas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="py-5">
+            <div class="container">
+                <div class="section-header text-center mb-5">
+                    <span class="badge rounded-pill bg-pink-soft text-pink mb-3">Skills</span>
+                    <h2 class="fw-bold">Core Competencies</h2>
+                    <p class="text-secondary mx-auto mb-0" style="max-width: 680px;">Kumpulan kemampuan teknis dan interpersonal yang saya gunakan untuk menyelesaikan proyek dengan kualitas profesional.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="card border-0 shadow-sm rounded-4 p-4 bg-white h-100">
+                            <h3 class="h5 text-pink mb-3">Hard Skills</h3>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2"><i class="fas fa-check-circle text-pink me-2"></i>Web Design</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-pink me-2"></i>Web Development</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-pink me-2"></i>Office Administrative</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card border-0 shadow-sm rounded-4 p-4 bg-white h-100">
+                            <h3 class="h5 text-pink mb-3">Soft Skills</h3>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2"><i class="fas fa-check-circle text-pink me-2"></i>Communication</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-pink me-2"></i>Teamwork</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-pink me-2"></i>Leadership</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-pink me-2"></i>Time Management</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-pink me-2"></i>Problem Solving</li>
+                                <li><i class="fas fa-check-circle text-pink me-2"></i>Adaptability</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="certificates" class="section-bg py-5">
+            <div class="container">
+                <div class="section-header text-center mb-5">
+                    <span class="badge rounded-pill bg-pink-soft text-pink mb-3">Certificates</span>
+                    <h2 class="fw-bold">Certifications & Achievements</h2>
+                    <p class="text-secondary mx-auto mb-0" style="max-width: 680px;">Kumpulan sertifikat yang mendukung kredibilitas dan pengalaman saya dalam pengembangan digital dan kepemimpinan.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <a href="assets/sertificate/1.png" target="_blank" rel="noreferrer noopener" class="cert-card d-block rounded-4 overflow-hidden shadow-sm">
+                            <img src="assets/sertificate/1.png" alt="Graphic Design Fundamental" class="img-fluid" />
+                            <div class="cert-caption p-3 bg-white">
+                                <h3 class="h6 mb-1">Graphic Design Fundamental</h3>
+                                <p class="mb-0 text-muted"><small>17–27 Feb 2025</small></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <a href="assets/sertificate/2.png" target="_blank" rel="noreferrer noopener" class="cert-card d-block rounded-4 overflow-hidden shadow-sm">
+                            <img src="assets/sertificate/2.png" alt="Dialog Perempuan Inovasi" class="img-fluid" />
+                            <div class="cert-caption p-3 bg-white">
+                                <h3 class="h6 mb-1">Dialog Perempuan Inovasi</h3>
+                                <p class="mb-0 text-muted"><small>8 Nov 2024</small></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <a href="assets/sertificate/3.png" target="_blank" rel="noreferrer noopener" class="cert-card d-block rounded-4 overflow-hidden shadow-sm">
+                            <img src="assets/sertificate/3.png" alt="Product Development Bootcamp" class="img-fluid" />
+                            <div class="cert-caption p-3 bg-white">
+                                <h3 class="h6 mb-1">Product Development Bootcamp</h3>
+                                <p class="mb-0 text-muted"><small>2022</small></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <a href="assets/sertificate/4.png" target="_blank" rel="noreferrer noopener" class="cert-card d-block rounded-4 overflow-hidden shadow-sm">
+                            <img src="assets/sertificate/4.png" alt="Sertifikat Kompetensi Database Administrator" class="img-fluid" />
+                            <div class="cert-caption p-3 bg-white">
+                                <h3 class="h6 mb-1">Database Administrator</h3>
+                                <p class="mb-0 text-muted"><small>6 Mar 2026</small></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <a href="assets/sertificate/5.png" target="_blank" rel="noreferrer noopener" class="cert-card d-block rounded-4 overflow-hidden shadow-sm">
+                            <img src="assets/sertificate/5.png" alt="Workshop Laravel HIMSIA" class="img-fluid" />
+                            <div class="cert-caption p-3 bg-white">
+                                <h3 class="h6 mb-1">Workshop Laravel</h3>
+                                <p class="mb-0 text-muted"><small>31 Okt 2024</small></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <a href="assets/sertificate/6.png" target="_blank" rel="noreferrer noopener" class="cert-card d-block rounded-4 overflow-hidden shadow-sm">
+                            <img src="assets/sertificate/6.png" alt="Webinar Media Kreatif Karawang" class="img-fluid" />
+                            <div class="cert-caption p-3 bg-white">
+                                <h3 class="h6 mb-1">Webinar Media Kreatif</h3>
+                                <p class="mb-0 text-muted"><small>26 Okt 2024</small></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <a href="assets/sertificate/7.png" target="_blank" rel="noreferrer noopener" class="cert-card d-block rounded-4 overflow-hidden shadow-sm">
+                            <img src="assets/sertificate/7.png" alt="Uji Kompetensi Basis Data" class="img-fluid" />
+                            <div class="cert-caption p-3 bg-white">
+                                <h3 class="h6 mb-1">Data Competency</h3>
+                                <p class="mb-0 text-muted"><small>1 Jul 2025</small></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <a href="assets/sertificate/8.png" target="_blank" rel="noreferrer noopener" class="cert-card d-block rounded-4 overflow-hidden shadow-sm">
+                            <img src="assets/sertificate/8.png" alt="Workshop ERD, LRS dan UML" class="img-fluid" />
+                            <div class="cert-caption p-3 bg-white">
+                                <h3 class="h6 mb-1">Workshop ERD, LRS, UML</h3>
+                                <p class="mb-0 text-muted"><small>25 Juni 2025</small></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <a href="assets/sertificate/9.png" target="_blank" rel="noreferrer noopener" class="cert-card d-block rounded-4 overflow-hidden shadow-sm">
+                            <img src="assets/sertificate/9.png" alt="Workshop UI/UX Arunika" class="img-fluid" />
+                            <div class="cert-caption p-3 bg-white">
+                                <h3 class="h6 mb-1">UI/UX Arunika</h3>
+                                <p class="mb-0 text-muted"><small>6 Juni 2026</small></p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tools" class="py-5">
+            <div class="container">
+                <div class="section-header text-center mb-5">
+                    <span class="badge rounded-pill bg-pink-soft text-pink mb-3">Favorite Tools</span>
+                    <h2 class="fw-bold">Tools & Technologies</h2>
+                    <p class="text-secondary mx-auto mb-0" style="max-width: 680px;">Alat dan platform yang saya gunakan untuk mengembangkan solusi digital, desain, dan manajemen data.</p>
+                </div>
+                <div class="row g-3">
+                    <div class="col-6 col-sm-4 col-md-3">
+                        <div class="tool-card rounded-4 shadow-sm p-3 text-center bg-white h-100">
+                            <i class="devicon-figma-plain colored fs-2 mb-2"></i>
+                            <p class="mb-0">Figma</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3">
+                        <div class="tool-card rounded-4 shadow-sm p-3 text-center bg-white h-100">
+                            <i class="fas fa-code fs-2 text-pink mb-2"></i>
+                            <p class="mb-0">Visual Studio Code</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3">
+                        <div class="tool-card rounded-4 shadow-sm p-3 text-center bg-white h-100">
+                            <i class="fas fa-terminal fs-2 text-pink mb-2"></i>
+                            <p class="mb-0">Laragon</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3">
+                        <div class="tool-card rounded-4 shadow-sm p-3 text-center bg-white h-100">
+                            <i class="fab fa-github fs-2 text-pink mb-2"></i>
+                            <p class="mb-0">GitHub</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3">
+                        <div class="tool-card rounded-4 shadow-sm p-3 text-center bg-white h-100">
+                            <i class="fab fa-vimeo-v fs-2 text-pink mb-2"></i>
+                            <p class="mb-0">Vercel</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3">
+                        <div class="tool-card rounded-4 shadow-sm p-3 text-center bg-white h-100">
+                            <i class="fab fa-google fs-2 text-pink mb-2"></i>
+                            <p class="mb-0">Google Cloud</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3">
+                        <div class="tool-card rounded-4 shadow-sm p-3 text-center bg-white h-100">
+                            <i class="devicon-drawio-plain colored fs-2 mb-2"></i>
+                            <p class="mb-0">Draw.io</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3">
+                        <div class="tool-card rounded-4 shadow-sm p-3 text-center bg-white h-100">
+                            <i class="fab fa-wordpress fs-2 text-pink mb-2"></i>
+                            <p class="mb-0">MS Word</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3">
+                        <div class="tool-card rounded-4 shadow-sm p-3 text-center bg-white h-100">
+                            <i class="fas fa-file-excel fs-2 text-pink mb-2"></i>
+                            <p class="mb-0">MS Excel</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3">
+                        <div class="tool-card rounded-4 shadow-sm p-3 text-center bg-white h-100">
+                            <i class="fas fa-file-powerpoint fs-2 text-pink mb-2"></i>
+                            <p class="mb-0">MS PowerPoint</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3">
+                        <div class="tool-card rounded-4 shadow-sm p-3 text-center bg-white h-100">
+                            <i class="fas fa-chart-line fs-2 text-pink mb-2"></i>
+                            <p class="mb-0">Power BI</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3">
+                        <div class="tool-card rounded-4 shadow-sm p-3 text-center bg-white h-100">
+                            <i class="devicon-html5-plain colored fs-2 mb-2"></i>
+                            <p class="mb-0">HTML</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3">
+                        <div class="tool-card rounded-4 shadow-sm p-3 text-center bg-white h-100">
+                            <i class="devicon-css3-plain colored fs-2 mb-2"></i>
+                            <p class="mb-0">CSS</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3">
+                        <div class="tool-card rounded-4 shadow-sm p-3 text-center bg-white h-100">
+                            <i class="devicon-bootstrap-plain colored fs-2 mb-2"></i>
+                            <p class="mb-0">Bootstrap</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3">
+                        <div class="tool-card rounded-4 shadow-sm p-3 text-center bg-white h-100">
+                            <i class="devicon-javascript-plain colored fs-2 mb-2"></i>
+                            <p class="mb-0">JavaScript</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3">
+                        <div class="tool-card rounded-4 shadow-sm p-3 text-center bg-white h-100">
+                            <i class="devicon-php-plain colored fs-2 mb-2"></i>
+                            <p class="mb-0">PHP</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3">
+                        <div class="tool-card rounded-4 shadow-sm p-3 text-center bg-white h-100">
+                            <i class="devicon-laravel-plain colored fs-2 mb-2"></i>
+                            <p class="mb-0">Laravel</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3">
+                        <div class="tool-card rounded-4 shadow-sm p-3 text-center bg-white h-100">
+                            <i class="devicon-python-plain colored fs-2 mb-2"></i>
+                            <p class="mb-0">Python</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3">
+                        <div class="tool-card rounded-4 shadow-sm p-3 text-center bg-white h-100">
+                            <i class="devicon-mysql-plain colored fs-2 mb-2"></i>
+                            <p class="mb-0">MySQL</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3">
+                        <div class="tool-card rounded-4 shadow-sm p-3 text-center bg-white h-100">
+                            <i class="devicon-mysql-plain colored fs-2 mb-2"></i>
+                            <p class="mb-0">PhpMyAdmin</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3">
+                        <div class="tool-card rounded-4 shadow-sm p-3 text-center bg-white h-100">
+                            <i class="fas fa-robot fs-2 text-pink mb-2"></i>
+                            <p class="mb-0">ChatGPT AI</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3">
+                        <div class="tool-card rounded-4 shadow-sm p-3 text-center bg-white h-100">
+                            <i class="fas fa-brain fs-2 text-pink mb-2"></i>
+                            <p class="mb-0">Gemini AI</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-5">
+            <div class="container">
+                <div class="section-header text-center mb-5">
+                    <span class="badge rounded-pill bg-pink-soft text-pink mb-3" data-i18n="contact-badge">Contact</span>
+                    <h2 class="fw-bold" data-i18n="contact-title">Get in Touch</h2>
+                    <p class="text-secondary mx-auto mb-0" style="max-width: 680px;" data-i18n="contact-description">Saya terbuka untuk kolaborasi, proyek baru, dan kesempatan pembelajaran. Jangan ragu untuk menghubungi saya melalui email atau WhatsApp.</p>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="card border-0 shadow-sm rounded-4 p-4 bg-white">
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="contact-item d-flex align-items-start gap-3">
+                                        <div class="icon-box bg-pink text-white rounded-3 p-3"><i class="fas fa-map-marker-alt"></i></div>
+                                        <div>
+                                            <h3 class="h6 mb-1" data-i18n="location-label">Location</h3>
+                                            <p class="mb-0 text-secondary">Karawang, Jawa Barat, Indonesia</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="contact-item d-flex align-items-start gap-3">
+                                        <div class="icon-box bg-pink text-white rounded-3 p-3"><i class="fab fa-whatsapp"></i></div>
+                                        <div>
+                                            <h3 class="h6 mb-1" data-i18n="wa-label">WhatsApp</h3>
+                                            <p class="mb-0"><a href="https://wa.me/62895359255382" class="text-decoration-none text-secondary" target="_blank" rel="noreferrer noopener">0895-3592-55382</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="contact-item d-flex align-items-start gap-3">
+                                        <div class="icon-box bg-pink text-white rounded-3 p-3"><i class="fas fa-envelope"></i></div>
+                                        <div>
+                                            <h3 class="h6 mb-1" data-i18n="email-label">Email</h3>
+                                            <p class="mb-0"><a href="mailto:rorojasminesetyoningsih@gmail.com" class="text-decoration-none text-secondary">rorojasminesetyoningsih@gmail.com</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="contact-item d-flex align-items-start gap-3">
+                                        <div class="icon-box bg-pink text-white rounded-3 p-3"><i class="fab fa-github"></i></div>
+                                        <div>
+                                            <h3 class="h6 mb-1" data-i18n="github-label">GitHub</h3>
+                                            <p class="mb-0"><a href="https://github.com/rorojasmine4" class="text-decoration-none text-secondary" target="_blank" rel="noreferrer noopener">@rorojasmine4</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-4 bg-white border-top">
+        <div class="container text-center">
+            <p class="mb-0 text-secondary">© 2026 Roro Jasmine Setyoningsih. Portfolio dibuat dengan Bootstrap 5, FontAwesome, dan Devicon.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Q0i67K3y9XHLJ1Xho/v1B9Fyu7e3bgK+UIYmVSm3fKfDfG1eX0c5T6/wGDweVJJe" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </body>
 </html>
