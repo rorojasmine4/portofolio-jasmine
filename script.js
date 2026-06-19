@@ -19,13 +19,15 @@ document.addEventListener("DOMContentLoaded", function () {
       "lang-en": "EN",
       "lang-id": "ID",
       "share-button": "Share",
+      "theme-light": "Light",
+      "theme-dark": "Dark",
       "hero-tagline": "Professional Portfolio",
       "hero-name": "RORO JASMINE SETYONINGSIH",
       "hero-description": "Information Systems student focused on professional digital solutions, platform development, and database management.",
       "cta-download": "Download CV",
       "about-badge": "About Me",
       "about-title": "Who Am I?",
-      "about-p1": "I am an Information Systems undergraduate at Universitas Bina Sarana Informatika Karawang campus with a focus on technology integration and data management. I have real experience building digital platforms like MySems.my.id — a school event management system designed to improve collaboration, planning, and reporting.",
+      "about-p1": "I am an Information Systems undergraduate at Universitas Bina Sarana Informatika Karawang campus with a focus on technology integration and data management. I have real experience building digital platforms like MySems.my.id a school event management system designed to improve collaboration, planning, and reporting.",
       "about-p2": "As a young professional, I am skilled in designing system diagrams such as UML (Use Case, Activity Diagram, etc.), ERD, and LRD. I also have strong understanding as a Database Administrator with experience in DDL and DML, and competencies in Laravel, HTML, CSS, Bootstrap, JavaScript, Python, MySQL, and related web technologies.",
       "about-p3": "I always strive to deliver structured, aesthetic, and reliable digital solutions to meet business and educational needs.",
       "focus-title": "Professional focus",
@@ -57,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
       "edu-2-desc": "Information Systems study program focusing on digital technology, systems analysis, and quality information management.",
       "organization-title": "Organizational Experience",
       "organization-description": "Key leadership roles and student organization experience that support my teamwork and communication skills.",
-      "org-1-role": "Chair of OSISI Section for Character Development & Noble Moral Values",
+      "org-1-role": "Participating in the OSIS Organization at SMKN 1 Karawang as the head of the Noble Character & Moral Development Section",
       "org-1-date": "2022 - 2023",
       "org-1-desc": "Led programs aimed at strengthening student character, ethics, and moral values through extracurricular activities.",
       "org-2-role": "Secretary of Internal Affairs Department at UBSI Karawang Student Executive Board",
@@ -149,13 +151,15 @@ document.addEventListener("DOMContentLoaded", function () {
       "lang-en": "EN",
       "lang-id": "ID",
       "share-button": "Bagikan",
+      "theme-light": "Terang",
+      "theme-dark": "Gelap",
       "hero-tagline": "Portofolio Profesional",
       "hero-name": "RORO JASMINE SETYONINGSIH",
       "hero-description": "Mahasiswi Sistem Informasi yang fokus pada solusi digital profesional, pengembangan platform, dan manajemen basis data.",
       "cta-download": "Unduh CV",
       "about-badge": "Tentang Saya",
       "about-title": "Siapa Saya?",
-      "about-p1": "Saya adalah mahasiswi S1 Sistem Informasi di Universitas Bina Sarana Informatika Kampus Karawang dengan fokus pada integrasi teknologi dan manajemen data. Saya memiliki pengalaman nyata dalam membangun platform digital seperti MySems.my.id — sebuah sistem manajemen acara sekolah yang dirancang untuk meningkatkan kolaborasi, perencanaan, dan pelaporan.",
+      "about-p1": "Saya adalah mahasiswi S1 Sistem Informasi di Universitas Bina Sarana Informatika Kampus Karawang dengan fokus pada integrasi teknologi dan manajemen data. Saya memiliki pengalaman nyata dalam membangun platform digital seperti MySems.my.id sebuah sistem manajemen acara sekolah yang dirancang untuk meningkatkan kolaborasi, perencanaan, dan pelaporan.",
       "about-p2": "Sebagai profesional muda, saya mahir dalam perancangan diagram sistem seperti UML (Use Case, Activity Diagram, dll.), ERD, dan LRD. Saya juga memiliki pemahaman yang kuat sebagai Database Administrator dengan pengalaman di DDL dan DML, serta kompetensi dalam teknologi Laravel, HTML, CSS, Bootstrap, JavaScript, Python, MySQL, dan ekosistem web terkait.",
       "about-p3": "Saya selalu berusaha menghadirkan solusi digital yang terstruktur, estetis, dan dapat diandalkan untuk memenuhi kebutuhan bisnis dan pendidikan.",
       "focus-title": "Fokus profesional",
@@ -187,7 +191,7 @@ document.addEventListener("DOMContentLoaded", function () {
       "edu-2-desc": "Program studi Sistem Informasi yang berfokus pada teknologi digital, analisis sistem, dan manajemen informasi berkualitas.",
       "organization-title": "Pengalaman Organisasi",
       "organization-description": "Peran kepemimpinan dan pengalaman organisasi mahasiswa yang mendukung kemampuan kerja tim dan komunikasi saya.",
-      "org-1-role": "Ketua Seksi OSISI Pengembangan Karakter & Nilai Moral Mulia",
+      "org-1-role": "Mengikuti Organisasi OSIS di SMKN 1 Karawang sebagai ketua dari Seksi Pembinaan Budi Pekerti Luhur & Akhlak Mulia.",
       "org-1-date": "2022 - 2023",
       "org-1-desc": "Memimpin program yang memperkuat karakter, etika, dan nilai moral melalui kegiatan ekstrakurikuler.",
       "org-2-role": "Sekretaris Departemen Dalam Negeri BEM UBSI Karawang",
@@ -292,6 +296,49 @@ document.addEventListener("DOMContentLoaded", function () {
   const savedLang = localStorage.getItem("portfolioLang");
   const defaultLang = savedLang || (navigator.language.startsWith("id") ? "id" : "en");
   applyLanguage(defaultLang);
+
+  // Theme (dark / light) handling
+  const themeToggle = document.getElementById('themeToggle');
+  const themeIcon = document.getElementById('themeIcon');
+  const themeLabel = document.getElementById('themeLabel');
+  const metaTheme = document.querySelector('meta[name="theme-color"]');
+
+  function setTheme(theme) {
+    if (theme === 'dark') {
+      document.body.classList.add('dark-mode');
+      if (metaTheme) metaTheme.setAttribute('content', '#0f0f12');
+    } else {
+      document.body.classList.remove('dark-mode');
+      if (metaTheme) metaTheme.setAttribute('content', '#d8a5c4');
+    }
+    localStorage.setItem('portfolioTheme', theme);
+    updateThemeUI(theme);
+  }
+
+  function updateThemeUI(theme) {
+    const lang = document.documentElement.lang || defaultLang;
+    const t = translations[lang] || translations['en'];
+    if (theme === 'dark') {
+      themeIcon.className = 'fas fa-moon';
+      themeLabel.textContent = t['theme-dark'] || 'Dark';
+      themeToggle.setAttribute('aria-pressed', 'true');
+    } else {
+      themeIcon.className = 'fas fa-sun';
+      themeLabel.textContent = t['theme-light'] || 'Light';
+      themeToggle.setAttribute('aria-pressed', 'false');
+    }
+  }
+
+  themeToggle && themeToggle.addEventListener('click', function () {
+    const current = localStorage.getItem('portfolioTheme') || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    const next = current === 'dark' ? 'light' : 'dark';
+    setTheme(next);
+  });
+
+  // Initialize theme from localStorage or prefers-color-scheme
+  const savedTheme = localStorage.getItem('portfolioTheme');
+  const initialTheme = savedTheme || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  setTheme(initialTheme);
 
   if (navigator.share) {
     shareButton.addEventListener("click", function () {

@@ -51,7 +51,11 @@
                                 <button type="button" class="btn btn-outline-pink btn-sm" data-lang="id" data-i18n="lang-id"></button>
                             </div>
                         </li>
-                        <li class="nav-item ms-3 mt-3 mt-lg-0">
+                        <li class="nav-item ms-3 mt-3 mt-lg-0 d-flex align-items-center">
+                            <button id="themeToggle" class="btn btn-outline-pink btn-sm me-2" aria-label="Toggle theme">
+                                <i class="fas fa-moon" id="themeIcon"></i>
+                                <span class="ms-2 d-none d-lg-inline" id="themeLabel">Dark</span>
+                            </button>
                             <button id="shareButton" class="btn btn-outline-pink btn-sm text-pink">
                                 <i class="fas fa-share-alt me-2"></i><span data-i18n="share-button"></span>
                             </button>
@@ -142,7 +146,7 @@
                             <div class="row g-4 align-items-center">
                                 <div class="col-md-4 text-center">
                                     <div class="project-badge rounded-circle bg-pink-soft d-inline-flex align-items-center justify-content-center mb-3" style="width: 120px; height: 120px;">
-                                        <i class="fas fa-school fa-2x text-pink"></i>
+                                       <img src="assets/mysems-logo.png" alt="MySEMS Logo" class="img-fluid" style="max-width: 80px;" />
                                     </div>
                                 </div>
                                 <div class="col-md-8">
