@@ -136,7 +136,9 @@ document.addEventListener("DOMContentLoaded", function () {
       "contact-email-val": "rorojasminesetyoningsih@gmail.com",
       "github-label": "GitHub",
       "contact-github-val": "@rorojasmine4",
-      "footer-text": "© 2026 Roro Jasmine Setyoningsih. All rights reserved."
+      "footer-text": "© 2026 Roro Jasmine Setyoningsih. All rights reserved.",
+      "linkedin-label": "LinkedIn",
+      "contact-linkedin-val": "rorojasmine4"
     },
     id: {
       "nav-brand": "PORTOFOLIO",
@@ -268,7 +270,9 @@ document.addEventListener("DOMContentLoaded", function () {
       "contact-email-val": "rorojasminesetyoningsih@gmail.com",
       "github-label": "GitHub",
       "contact-github-val": "@rorojasmine4",
-      "footer-text": "© 2026 Roro Jasmine Setyoningsih. Semua hak dilindungi."
+      "footer-text": "© 2026 Roro Jasmine Setyoningsih. Semua hak dilindungi.",
+      "linkedin-label": "LinkedIn",
+      "contact-linkedin-val": "rorojasmine4"
     }
   };
 
