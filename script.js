@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function () {
       "contact-email-val": "rorojasminesetyoningsih@gmail.com",
       "github-label": "GitHub",
       "contact-github-val": "@rorojasmine4",
-      "footer-text": "© 2026 Roro Jasmine Setyoningsih. Portfolio built with Bootstrap 5, FontAwesome, and Devicon."
+      "footer-text": "© 2026 Roro Jasmine Setyoningsih. All rights reserved."
     },
     id: {
       "nav-brand": "PORTOFOLIO",
@@ -248,7 +248,7 @@ document.addEventListener("DOMContentLoaded", function () {
       "contact-email-val": "rorojasminesetyoningsih@gmail.com",
       "github-label": "GitHub",
       "contact-github-val": "@rorojasmine4",
-      "footer-text": "© 2026 Roro Jasmine Setyoningsih. Portofolio dibuat dengan Bootstrap 5, FontAwesome, dan Devicon."
+      "footer-text": "© 2026 Roro Jasmine Setyoningsih. Semua hak dilindungi."
     }
   };
 
