@@ -28,6 +28,8 @@ body {
   color: var(--text-dark);
   line-height: 1.6;
   font-weight: 400;
+  overflow-x: hidden; /* Fix responsif mobile agar tidak bablas ke samping */
+  width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -194,26 +196,33 @@ button,
   z-index: -1;
 }
 
+/* FIX: Mengecilkan gambar profil dan menjadikannya lingkaran agar rapi */
 .hero-card {
-  max-width: 420px;
+  max-width: 200px;
+  aspect-ratio: 1 / 1;
   margin: 0 auto;
-  border: 2px solid rgba(199, 112, 160, 0.15);
-  background: #fff;
-  border-radius: 1.5rem;
-  padding: 8px;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  padding: 0;
   box-shadow: var(--shadow-lg);
   transition: all 0.4s ease;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-card:hover {
-  border-color: var(--pink);
+  border-color: var(--pink-soft);
   transform: translateY(-8px);
   box-shadow: 0 24px 48px rgba(199, 112, 160, 0.2);
 }
 
 .hero-card img {
-  border-radius: 1.2rem;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .section-header h2 {
@@ -232,6 +241,8 @@ button,
   height: 4px;
   background: linear-gradient(90deg, var(--pink) 0%, var(--pink-soft) 100%);
   border-radius: 2px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .info-card,
@@ -313,6 +324,7 @@ footer {
   font-size: 0.95rem;
 }
 
+/* FIX MOBILE STYLING */
 @media (max-width: 767.98px) {
   .hero-section {
     padding-top: 3rem;
@@ -324,6 +336,54 @@ footer {
     height: 400px;
     top: -30%;
     right: -10%;
+  }
+  
+  h1.display-5 {
+    font-size: 1.75rem !important;
+  }
+  
+  .lead {
+    font-size: 1rem !important;
+  }
+  
+  .section-header h2 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+  }
+  
+  .d-flex.flex-column.gap-3 {
+    gap: 1rem !important;
+  }
+  
+  .btn-lg {
+    padding: 0.65rem 1.25rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-bg {
+    padding: 2rem 0;
+  }
+  
+  .tool-card {
+    min-height: 120px;
+    padding: 1.25rem 0.75rem;
+  }
+  
+  .tool-card i {
+    font-size: 2.2rem;
+  }
+  
+  .tool-card p {
+    font-size: 0.85rem;
+  }
+  
+  .info-card {
+    padding: 1.5rem !important;
+  }
+  
+  h3.h6 {
+    font-size: 0.85rem !important;
   }
 }
 
@@ -347,10 +407,6 @@ footer {
   
   h1 {
     font-size: 1.75rem !important;
-  }
-  
-  .hero-card {
-    max-width: 100%;
   }
   
   .section-bg {
