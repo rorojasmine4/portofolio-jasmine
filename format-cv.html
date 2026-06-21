@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Roro Jasmine Setyoningsih</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+            background: #f2f2f2;
+            color: #111;
+            font-size: 9.5pt;
+            line-height: 1.35;
+        }
+
+        .print-btn {
+            position: fixed;
+            top: 18px;
+            right: 18px;
+            background: #222;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 9px 20px;
+            font-size: 13px;
+            font-weight: 700;
+            cursor: pointer;
+            z-index: 999;
+            font-family: Arial, sans-serif;
+        }
+        .print-btn:hover { background: #444; }
+
+        .page {
+            max-width: 794px;
+            margin: 30px auto;
+            background: #fff;
+            padding: 28px 44px 28px 44px;
+        }
+
+        /* HEADER */
+        .cv-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 10px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #222;
+        }
+        .cv-header-photo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center top;
+            border: 2px solid #555;
+            flex-shrink: 0;
+        }
+        .cv-header-info {
+            flex: 1;
+        }
+        .cv-name {
+            font-size: 17pt;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #000;
+        }
+        .cv-role {
+            font-size: 9pt;
+            font-weight: 400;
+            color: #555;
+            margin: 2px 0 6px;
+        }
+        .cv-contacts {
+            font-size: 8.5pt;
+            color: #222;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 2px 12px;
+        }
+        .cv-contacts span { white-space: nowrap; }
+        .cv-contacts .sep { color: #888; }
+
+        /* SECTION */
+        .cv-section { margin-bottom: 10px; }
+        .cv-section-title {
+            font-size: 9pt;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #111;
+            border-bottom: 1px solid #555;
+            padding-bottom: 2px;
+            margin-bottom: 6px;
+        }
+
+        /* SUMMARY */
+        .cv-summary {
+            font-size: 9pt;
+            color: #222;
+            text-align: justify;
+            line-height: 1.45;
+        }
+
+        /* EDUCATION */
+        .cv-edu-entry { margin-bottom: 6px; }
+        .cv-edu-entry:last-child { margin-bottom: 0; }
+        .cv-edu-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 8px;
+        }
+        .cv-edu-school { font-size: 9.5pt; font-weight: 700; color: #000; }
+        .cv-edu-period { font-size: 8.5pt; color: #444; white-space: nowrap; }
+        .cv-edu-major { font-size: 9pt; color: #333; font-style: italic; }
+        .cv-edu-desc { font-size: 9pt; color: #222; margin-top: 2px; }
+
+        /* ORGANIZATION */
+        .cv-org-entry { margin-bottom: 7px; }
+        .cv-org-entry:last-child { margin-bottom: 0; }
+        .cv-org-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 8px;
+        }
+        .cv-org-title { font-size: 9.5pt; font-weight: 700; color: #000; }
+        .cv-org-period { font-size: 8.5pt; color: #444; white-space: nowrap; flex-shrink: 0; }
+        .cv-org-desc { font-size: 9pt; color: #222; margin-top: 2px; }
+
+        /* PROJECTS */
+        .cv-proj-entry { margin-bottom: 5px; }
+        .cv-proj-entry:last-child { margin-bottom: 0; }
+        .cv-proj-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 8px;
+        }
+        .cv-proj-name { font-size: 9.5pt; font-weight: 700; color: #000; }
+        .cv-proj-url { font-size: 8.5pt; color: #555; font-style: italic; white-space: nowrap; }
+        .cv-proj-desc { font-size: 9pt; color: #222; padding-left: 14px; margin-top: 1px; }
+        .cv-proj-desc li { margin-bottom: 1px; }
+
+        /* SKILLS */
+        .cv-skills-row {
+            font-size: 9pt;
+            color: #222;
+            margin-bottom: 3px;
+            display: flex;
+            gap: 6px;
+        }
+        .cv-skills-label { font-weight: 700; color: #111; white-space: nowrap; min-width: 110px; }
+        .cv-skills-value { color: #222; }
+
+        /* CERTIFICATES */
+        .cv-cert-entry {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 8px;
+            font-size: 9pt;
+            padding: 2px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .cv-cert-entry:last-child { border-bottom: none; }
+        .cv-cert-name { font-weight: 600; color: #000; }
+        .cv-cert-date { color: #555; font-style: italic; font-size: 8.5pt; white-space: nowrap; flex-shrink: 0; }
+
+        /* PRINT */
+        @media print {
+            body { background: #fff; font-size: 9pt; }
+            .page { margin: 0; padding: 18px 36px; max-width: 100%; box-shadow: none; }
+            .print-btn { display: none; }
+            @page { size: A4; margin: 0; }
+        }
+    </style>
+</head>
+<body>
+
+<button class="print-btn" onclick="window.print()">&#8595; Download PDF</button>
+
+<div class="page">
+
+    <!-- HEADER -->
+    <div class="cv-header">
+        <img src="assets/roro.jpeg" alt="Roro Jasmine Setyoningsih" class="cv-header-photo" />
+        <div class="cv-header-info">
+            <div class="cv-name">Roro Jasmine Setyoningsih</div>
+            <div class="cv-role" id="cv-role">Information Systems Student | Web Developer | Database Administrator</div>
+            <div class="cv-contacts">
+                <span>rorojasminesetyoningsih@gmail.com</span>
+                <span class="sep">|</span>
+                <span>0895-3592-55382</span>
+                <span class="sep">|</span>
+                <span id="cv-location">Karawang, West Java, Indonesia</span>
+                <span class="sep">|</span>
+                <span>github.com/rorojasmine4</span>
+                <span class="sep">|</span>
+                <span>linkedin.com/in/rorojasmine4</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 1. PROFESSIONAL SUMMARY -->
+    <div class="cv-section">
+        <div class="cv-section-title" id="cv-summary-title">Professional Summary</div>
+        <p class="cv-summary" id="cv-summary-desc"></p>
+    </div>
+
+    <!-- 2. EDUCATION -->
+    <div class="cv-section">
+        <div class="cv-section-title" id="cv-edu-title">Education</div>
+
+        <div class="cv-edu-entry">
+            <div class="cv-edu-head">
+                <span class="cv-edu-school">S1 Universitas Bina Sarana Informatika</span>
+                <span class="cv-edu-period">2024 – <span id="cv-present-1"></span></span>
+            </div>
+            <div class="cv-edu-major" id="cv-edu-2-major">Information Systems</div>
+            <div class="cv-edu-desc" id="cv-edu-2-desc"></div>
+        </div>
+
+        <div class="cv-edu-entry">
+            <div class="cv-edu-head">
+                <span class="cv-edu-school">SMK Negeri 1 Karawang</span>
+                <span class="cv-edu-period">2021 – 2024</span>
+            </div>
+            <div class="cv-edu-major" id="cv-edu-1-major">Vocational High School</div>
+            <div class="cv-edu-desc" id="cv-edu-1-desc"></div>
+        </div>
+    </div>
+
+    <!-- 3. PROJECTS -->
+    <div class="cv-section">
+        <div class="cv-section-title" id="cv-proj-title">Projects</div>
+
+        <div class="cv-proj-entry">
+            <div class="cv-proj-head">
+                <span class="cv-proj-name">MySems.my.id</span>
+                <span class="cv-proj-url">mysems.my.id</span>
+            </div>
+            <ul class="cv-proj-desc"><li id="cv-proj-desc"></li></ul>
+        </div>
+    </div>
+
+    <!-- 4. ORGANIZATIONAL EXPERIENCE -->
+    <div class="cv-section">
+        <div class="cv-section-title" id="cv-org-title">Organizational Experience</div>
+
+        <div class="cv-org-entry">
+            <div class="cv-org-head">
+                <span class="cv-org-title" id="cv-org-2-role"></span>
+                <span class="cv-org-period">2024 – <span id="cv-present-2"></span></span>
+            </div>
+            <div class="cv-org-desc" id="cv-org-2-desc"></div>
+        </div>
+
+        <div class="cv-org-entry">
+            <div class="cv-org-head">
+                <span class="cv-org-title" id="cv-org-1-role"></span>
+                <span class="cv-org-period">2022 – 2023</span>
+            </div>
+            <div class="cv-org-desc" id="cv-org-1-desc"></div>
+        </div>
+
+        <div class="cv-org-entry">
+            <div class="cv-org-head">
+                <span class="cv-org-title">NENITSU – Nihon No Bukatsu · SMKN 1 Karawang</span>
+                <span class="cv-org-period">2022 – 2023</span>
+            </div>
+            <div class="cv-org-desc" id="cv-org-3-desc-org"></div>
+        </div>
+    </div>
+
+    <!-- 5. WORK EXPERIENCE -->
+    <div class="cv-section">
+        <div class="cv-section-title" id="cv-exp-title">Work Experience</div>
+
+        <div class="cv-org-entry">
+            <div class="cv-org-head">
+                <span class="cv-org-title" id="cv-intern-1-role"></span>
+                <span class="cv-org-period">Okt 2022 – Jan 2023</span>
+            </div>
+            <div class="cv-org-desc" id="cv-intern-1-desc"></div>
+        </div>
+
+        <div class="cv-org-entry">
+            <div class="cv-org-head">
+                <span class="cv-org-title" id="cv-intern-2-role"></span>
+                <span class="cv-org-period">Mar 2023 – Jun 2023</span>
+            </div>
+            <div class="cv-org-desc" id="cv-intern-2-desc"></div>
+        </div>
+
+    </div>
+
+    <!-- 6. BOOTCAMP -->
+    <div class="cv-section">
+        <div class="cv-section-title" id="cv-bootcamp-title">Bootcamp</div>
+
+        <div class="cv-org-entry">
+            <div class="cv-org-head">
+                <span class="cv-org-title" id="cv-bootcamp-1-role"></span>
+                <span class="cv-org-period" id="cv-bootcamp-1-date"></span>
+            </div>
+            <div class="cv-org-desc" id="cv-bootcamp-1-desc"></div>
+        </div>
+    </div>
+
+    <!-- 7. TECHNICAL SKILLS -->
+    <div class="cv-section">
+        <div class="cv-section-title" id="cv-skills-title">Technical Skills</div>
+        <div class="cv-skills-row">
+            <span class="cv-skills-label" id="cv-hard-label">Hard Skills</span>
+            <span class="cv-skills-value">Web Design, Web Development, Office Administrative</span>
+        </div>
+        <div class="cv-skills-row">
+            <span class="cv-skills-label" id="cv-tech-label">Technologies</span>
+            <span class="cv-skills-value">Laravel, HTML, CSS, Bootstrap, JavaScript, Python, MySQL, PHP</span>
+        </div>
+        <div class="cv-skills-row">
+            <span class="cv-skills-label" id="cv-db-label">Database</span>
+            <span class="cv-skills-value">MySQL, ERD, LRD, DDL, DML, PhpMyAdmin</span>
+        </div>
+        <div class="cv-skills-row">
+            <span class="cv-skills-label" id="cv-design-label">Design & Modeling</span>
+            <span class="cv-skills-value">UML (Use Case, Activity Diagram), ERD, Figma, Draw.io</span>
+        </div>
+        <div class="cv-skills-row">
+            <span class="cv-skills-label" id="cv-tools-label">Tools</span>
+            <span class="cv-skills-value">GitHub, Vercel, Google Cloud, VS Code, Laragon, Power BI</span>
+        </div>
+        <div class="cv-skills-row">
+            <span class="cv-skills-label" id="cv-soft-label">Soft Skills</span>
+            <span class="cv-skills-value" id="cv-soft-value"></span>
+        </div>
+    </div>
+
+    <!-- 6. CERTIFICATIONS -->
+    <div class="cv-section">
+        <div class="cv-section-title" id="cv-cert-title">Licenses and Certifications</div>
+
+        <div class="cv-cert-entry">
+            <span class="cv-cert-name">Graphic Design Fundamental</span>
+            <span class="cv-cert-date">17–27 Feb 2025</span>
+        </div>
+        <div class="cv-cert-entry">
+            <span class="cv-cert-name" id="cv-cert-2-name">Dialog Perempuan Inovasi</span>
+            <span class="cv-cert-date">8 <span id="cv-nov"></span> 2024</span>
+        </div>
+        <div class="cv-cert-entry">
+            <span class="cv-cert-name">Product Development Bootcamp</span>
+            <span class="cv-cert-date">2022</span>
+        </div>
+        <div class="cv-cert-entry">
+            <span class="cv-cert-name" id="cv-cert-4-name">Database Administrator</span>
+            <span class="cv-cert-date">6 <span id="cv-mar"></span> 2026</span>
+        </div>
+        <div class="cv-cert-entry">
+            <span class="cv-cert-name">Workshop Laravel</span>
+            <span class="cv-cert-date">31 <span id="cv-oct"></span> 2024</span>
+        </div>
+        <div class="cv-cert-entry">
+            <span class="cv-cert-name" id="cv-cert-6-name">Webinar Media Kreatif</span>
+            <span class="cv-cert-date">26 <span id="cv-oct2"></span> 2024</span>
+        </div>
+        <div class="cv-cert-entry">
+            <span class="cv-cert-name">Data Competency</span>
+            <span class="cv-cert-date">1 <span id="cv-jul"></span> 2025</span>
+        </div>
+        <div class="cv-cert-entry">
+            <span class="cv-cert-name">Workshop ERD, LRS, UML</span>
+            <span class="cv-cert-date">25 <span id="cv-jun"></span> 2025</span>
+        </div>
+        <div class="cv-cert-entry">
+            <span class="cv-cert-name">UI/UX Arunika</span>
+            <span class="cv-cert-date">6 <span id="cv-jun2"></span> 2026</span>
+        </div>
+    </div>
+
+</div><!-- end .page -->
+
+<script>
+const translations = {
+    en: {
+        role: "Information Systems Student | Web Developer | Database Administrator",
+        location: "Karawang, West Java, Indonesia",
+        summaryTitle: "Professional Summary",
+        summaryDesc: "I am an Information Systems undergraduate at Universitas Bina Sarana Informatika Karawang campus with a focus on technology integration and data management. I have real experience building digital platforms like MySems.my.id, a school event management system. Skilled in UML, ERD, LRD system design, Database Administration (DDL/DML), Laravel, HTML, CSS, Bootstrap, JavaScript, Python, and MySQL.",
+        eduTitle: "Education",
+        edu2Major: "Information Systems",
+        edu2Desc: "Information Systems study program focusing on digital technology, systems analysis, and quality information management.",
+        edu1Major: "Software Engineering (Rekayasa Perangkat Lunak)",
+        edu1Desc: "Vocational high school education that strengthened technical foundations in programming, data management, and information technology services.",
+        present: "Present",
+        projTitle: "Projects",
+        projDesc: "A School Event Management System designed to simplify planning, coordination, and reporting for educational events. Supports event management with an intuitive dashboard, participant data management, and structured validation workflows. Stack: Laravel, Bootstrap, MySQL, JavaScript.",
+        orgTitle: "Organizational Experience",
+        org2Role: "Secretary of Internal Affairs Department at UBSI Karawang Student Executive Board",
+        org2Desc: "Managed internal communications and coordinated departmental operations for the student government organization.",
+        org1Role: "Head of Noble Character & Moral Development Section – OSIS SMKN 1 Karawang",
+        org1Desc: "Led programs aimed at strengthening student character, ethics, and moral values through extracurricular activities.",
+        org3DescOrg: "Learned to write Hiragana, Katakana & Kanji and studied Japanese culture through extracurricular activities.",
+        expTitle: "Work Experience",
+        intern1Role: "Staff Intern – Kantor Imigrasi Kelas I Non TPI Karawang",
+        intern1Desc: "Staff Tata Usaha & Customer Service · Administrator · Entry Data · Input incoming letters and create outgoing letter numbers.",
+        intern2Role: "Office Intern – PT. TRIX Indonesia",
+        intern2Desc: "Office Welding division · Input spare part production quantity in Welding section for both NG and non-NG items.",
+        org3Role: "NENITSU – Nihon No Bukatsu (Japanese Club) · SMKN 1 Karawang",
+        org3Desc: "Learned to write Hiragana, Katakana & Kanji and studied Japanese culture.",
+        bootcampTitle: "Bootcamp",
+        bootcamp1Role: "Bootcamp Markoding – Perempuan Inovasi",
+        bootcamp1Date: "2022",
+        bootcamp1Desc: "Web development and UI/UX Design training using Figma, HTML, CSS & JavaScript. Created LEARNEMIA, an educational prototype about anemia management.",
+        skillsTitle: "Technical Skills",
+        hardLabel: "Hard Skills",
+        techLabel: "Technologies",
+        dbLabel: "Database",
+        designLabel: "Design & Modeling",
+        toolsLabel: "Tools",
+        softLabel: "Soft Skills",
+        softValue: "Communication, Teamwork, Leadership, Time Management, Problem Solving, Adaptability",
+        certTitle: "Licenses and Certifications",
+        nov: "Nov", mar: "Mar", oct: "Oct", jul: "Jul", jun: "Jun"
+    },
+    id: {
+        role: "Mahasiswi Sistem Informasi | Web Developer | Database Administrator",
+        location: "Karawang, Jawa Barat, Indonesia",
+        summaryTitle: "Tentang Saya",
+        summaryDesc: "Saya adalah mahasiswi S1 Sistem Informasi di Universitas Bina Sarana Informatika Kampus Karawang dengan fokus pada integrasi teknologi dan manajemen data. Saya memiliki pengalaman nyata dalam membangun platform digital seperti MySems.my.id, sebuah sistem manajemen acara sekolah. Mahir dalam perancangan diagram UML, ERD, LRD, Administrasi Basis Data (DDL/DML), Laravel, HTML, CSS, Bootstrap, JavaScript, Python, dan MySQL.",
+        eduTitle: "Pendidikan",
+        edu2Major: "Sistem Informasi",
+        edu2Desc: "Program studi Sistem Informasi yang berfokus pada teknologi digital, analisis sistem, dan manajemen informasi berkualitas.",
+        edu1Major: "Rekayasa Perangkat Lunak",
+        edu1Desc: "Pendidikan menengah kejuruan yang memperkuat dasar teknis dalam pemrograman, manajemen data, dan layanan teknologi informasi.",
+        present: "Sekarang",
+        projTitle: "Proyek",
+        projDesc: "School Event Management System yang dirancang untuk memudahkan perencanaan, koordinasi, dan pelaporan acara pendidikan. Mendukung pengelolaan kegiatan dengan dashboard intuitif, data manajemen peserta, dan proses validasi yang terstruktur. Stack: Laravel, Bootstrap, MySQL, JavaScript.",
+        orgTitle: "Pengalaman Organisasi",
+        org2Role: "Sekretaris Departemen Dalam Negeri BEM UBSI Karawang",
+        org2Desc: "Mengelola komunikasi internal dan koordinasi operasional departemen untuk organisasi mahasiswa.",
+        org1Role: "Ketua Seksi Pembinaan Budi Pekerti Luhur & Akhlak Mulia – OSIS SMKN 1 Karawang",
+        org1Desc: "Memimpin program yang memperkuat karakter, etika, dan nilai moral melalui kegiatan ekstrakurikuler.",
+        org3DescOrg: "Belajar menulis Hiragana, Katakana & Kanji serta mempelajari kebudayaan Jepang melalui kegiatan ekstrakurikuler.",
+        expTitle: "Pengalaman Kerja",
+        intern1Role: "Staff Magang – Kantor Imigrasi Kelas I Non TPI Karawang",
+        intern1Desc: "Staff Tata Usaha & Customer Service · Administrator · Entry Data · Menginput surat masuk serta membuat nomor surat keluar.",
+        intern2Role: "Office Intern – PT. TRIX Indonesia",
+        intern2Desc: "Bagian Office Welding · Menginput jumlah produksi sparepart di bagian Welding baik barang NG maupun tidak.",
+        org3Role: "NENITSU – Nihon No Bukatsu (Ekskul Bahasa Jepang) · SMKN 1 Karawang",
+        org3Desc: "Belajar menulis Hiragana, Katakana & Kanji serta mempelajari kebudayaan Jepang.",
+        bootcampTitle: "Bootcamp",
+        bootcamp1Role: "Bootcamp Markoding – Perempuan Inovasi",
+        bootcamp1Date: "2022",
+        bootcamp1Desc: "Pelatihan web development dan UI/UX Design menggunakan Figma, HTML, CSS & JavaScript. Membuat website LEARNEMIA yaitu prototype edukasi tentang penanganan anemia.",
+        skillsTitle: "Keterampilan Teknis",
+        hardLabel: "Hard Skills",
+        techLabel: "Teknologi",
+        dbLabel: "Basis Data",
+        designLabel: "Desain & Pemodelan",
+        toolsLabel: "Alat",
+        softLabel: "Soft Skills",
+        softValue: "Komunikasi, Kerja Tim, Kepemimpinan, Manajemen Waktu, Pemecahan Masalah, Adaptabilitas",
+        certTitle: "Lisensi dan Sertifikasi",
+        nov: "Nov", mar: "Mar", oct: "Okt", jul: "Jul", jun: "Juni"
+    }
+};
+
+// Baca bahasa dari URL param (prioritas) lalu localStorage lalu browser
+const storedLang = localStorage.getItem('portfolioLang');
+const params = new URLSearchParams(window.location.search);
+const paramLang = params.get('lang');
+const lang = (paramLang === 'id' || paramLang === 'en')
+    ? paramLang
+    : (storedLang === 'id' || storedLang === 'en')
+        ? storedLang
+        : (navigator.language.startsWith('id') ? 'id' : 'en');
+
+const t = translations[lang] || translations['en'];
+
+document.documentElement.lang = lang;
+document.title = lang === 'id'
+    ? 'CV - Roro Jasmine Setyoningsih'
+    : 'CV - Roro Jasmine Setyoningsih';
+
+// Isi konten
+document.getElementById('cv-role').textContent = t.role;
+document.getElementById('cv-location').textContent = t.location;
+document.getElementById('cv-summary-title').textContent = t.summaryTitle;
+document.getElementById('cv-summary-desc').textContent = t.summaryDesc;
+document.getElementById('cv-edu-title').textContent = t.eduTitle;
+document.getElementById('cv-edu-2-major').textContent = t.edu2Major;
+document.getElementById('cv-edu-2-desc').textContent = t.edu2Desc;
+document.getElementById('cv-edu-1-major').textContent = t.edu1Major;
+document.getElementById('cv-edu-1-desc').textContent = t.edu1Desc;
+document.getElementById('cv-present-1').textContent = t.present;
+document.getElementById('cv-proj-title').textContent = t.projTitle;
+document.getElementById('cv-proj-desc').textContent = t.projDesc;
+document.getElementById('cv-org-title').textContent = t.orgTitle;
+document.getElementById('cv-org-2-role').textContent = t.org2Role;
+document.getElementById('cv-org-2-desc').textContent = t.org2Desc;
+document.getElementById('cv-org-1-role').textContent = t.org1Role;
+document.getElementById('cv-org-1-desc').textContent = t.org1Desc;
+document.getElementById('cv-present-2').textContent = t.present;
+document.getElementById('cv-org-3-desc-org').textContent = t.org3DescOrg;
+document.getElementById('cv-exp-title').textContent = t.expTitle;
+document.getElementById('cv-intern-1-role').textContent = t.intern1Role;
+document.getElementById('cv-intern-1-desc').textContent = t.intern1Desc;
+document.getElementById('cv-intern-2-role').textContent = t.intern2Role;
+document.getElementById('cv-intern-2-desc').textContent = t.intern2Desc;
+document.getElementById('cv-bootcamp-title').textContent = t.bootcampTitle;
+document.getElementById('cv-bootcamp-1-role').textContent = t.bootcamp1Role;
+document.getElementById('cv-bootcamp-1-date').textContent = t.bootcamp1Date;
+document.getElementById('cv-bootcamp-1-desc').textContent = t.bootcamp1Desc;
+document.getElementById('cv-skills-title').textContent = t.skillsTitle;
+document.getElementById('cv-hard-label').textContent = t.hardLabel;
+document.getElementById('cv-tech-label').textContent = t.techLabel;
+document.getElementById('cv-db-label').textContent = t.dbLabel;
+document.getElementById('cv-design-label').textContent = t.designLabel;
+document.getElementById('cv-tools-label').textContent = t.toolsLabel;
+document.getElementById('cv-soft-label').textContent = t.softLabel;
+document.getElementById('cv-soft-value').textContent = t.softValue;
+document.getElementById('cv-cert-title').textContent = t.certTitle;
+document.getElementById('cv-nov').textContent = t.nov;
+document.getElementById('cv-mar').textContent = t.mar;
+document.getElementById('cv-oct').textContent = t.oct;
+document.getElementById('cv-oct2').textContent = t.oct;
+document.getElementById('cv-jul').textContent = t.jul;
+document.getElementById('cv-jun').textContent = t.jun;
+document.getElementById('cv-jun2').textContent = t.jun;
+</script>
+</body>
+</html>

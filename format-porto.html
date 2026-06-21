@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio – Roro Jasmine Setyoningsih</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #faf3f7;
+            color: #2b2b3b;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+        .page {
+            max-width: 820px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 48px 52px;
+        }
+
+        /* HEADER */
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            padding-bottom: 28px;
+            border-bottom: 3px solid #c770a0;
+            margin-bottom: 28px;
+        }
+        .header-photo {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #c770a0;
+            flex-shrink: 0;
+        }
+        .header-info h1 {
+            font-size: 22px;
+            font-weight: 700;
+            color: #2b2b3b;
+            letter-spacing: 0.5px;
+        }
+        .header-info .role {
+            font-size: 13px;
+            color: #c770a0;
+            font-weight: 600;
+            margin: 3px 0 8px;
+        }
+        .header-contacts {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px 18px;
+            font-size: 12px;
+            color: #6f6f84;
+        }
+        .header-contacts span,
+        .header-contacts a {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .header-contacts a { color: #6f6f84; text-decoration: none; }
+        .header-contacts i { color: #c770a0; font-size: 12px; }
+
+        /* SECTION */
+        .section { margin-bottom: 26px; }
+        .section-title {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #c770a0;
+            border-bottom: 1.5px solid #f7e6f2;
+            padding-bottom: 5px;
+            margin-bottom: 14px;
+        }
+
+        /* ABOUT */
+        .about-text { color: #4a4a5a; text-align: justify; }
+
+        /* ENTRY (ORG / EXP) */
+        .entry { margin-bottom: 14px; }
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 8px;
+        }
+        .entry-title { font-weight: 700; font-size: 13px; color: #2b2b3b; }
+        .entry-company { font-size: 12px; color: #c770a0; font-weight: 600; }
+        .entry-period {
+            font-size: 11px;
+            color: #fff;
+            background: #c770a0;
+            padding: 2px 8px;
+            border-radius: 20px;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+        .entry-desc { font-size: 12px; color: #6f6f84; margin-top: 4px; }
+
+        /* PROJECTS */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        .project-item {
+            border: 1px solid #f7e6f2;
+            border-radius: 8px;
+            padding: 10px 12px;
+            background: #fdf8fb;
+        }
+        .project-name {
+            font-weight: 700;
+            font-size: 12px;
+            color: #c770a0;
+            margin-bottom: 3px;
+        }
+        .project-desc { font-size: 11.5px; color: #6f6f84; }
+        .project-tech { font-size: 11px; color: #a25a84; margin-top: 4px; font-style: italic; }
+        .project-link { font-size: 11px; color: #c770a0; }
+
+        /* EDUCATION */
+        .edu-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        .edu-item {
+            border: 1px solid #f7e6f2;
+            border-radius: 8px;
+            padding: 10px 12px;
+            background: #fdf8fb;
+        }
+        .edu-school { font-weight: 700; font-size: 12.5px; color: #2b2b3b; }
+        .edu-detail { font-size: 11.5px; color: #c770a0; margin-top: 2px; }
+        .edu-year { font-size: 11px; color: #6f6f84; margin-top: 1px; }
+
+        /* SKILLS */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+        }
+        .skill-item {
+            background: #f7e6f2;
+            border: 1px solid #e6b7d4;
+            border-radius: 6px;
+            padding: 7px 10px;
+            font-size: 12px;
+            color: #a25a84;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        /* TOOLS */
+        .tools-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        .tool-item {
+            background: #fdf8fb;
+            border: 1px solid #e6b7d4;
+            border-radius: 20px;
+            padding: 3px 12px;
+            font-size: 11.5px;
+            color: #a25a84;
+            font-weight: 600;
+        }
+
+        /* CERTS */
+        .cert-list { list-style: none; padding: 0; }
+        .cert-list li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 6px 0;
+            border-bottom: 1px solid #f7e6f2;
+            font-size: 12px;
+        }
+        .cert-list li:last-child { border-bottom: none; }
+        .cert-name { color: #2b2b3b; font-weight: 600; }
+        .cert-date { color: #a25a84; font-size: 11px; font-style: italic; }
+
+        /* ORG GRID */
+        .org-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        .org-item {
+            border: 1px solid #f7e6f2;
+            border-radius: 8px;
+            padding: 10px 12px;
+            background: #fdf8fb;
+        }
+        .org-role { font-weight: 700; font-size: 12.5px; color: #2b2b3b; }
+        .org-place { font-size: 11.5px; color: #c770a0; margin: 1px 0; }
+        .org-year { font-size: 11px; color: #6f6f84; }
+        .org-desc { font-size: 11.5px; color: #6f6f84; margin-top: 3px; }
+
+        /* PRINT */
+        @media print {
+            body { background: #fff; }
+            .page { padding: 20px 28px; box-shadow: none; }
+            .print-btn { display: none; }
+            @page { size: A4; margin: 0; }
+        }
+
+        /* PRINT BUTTON */
+        .print-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #c770a0;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 22px;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(199,112,160,0.3);
+            z-index: 999;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        .print-btn:hover { background: #a25a84; }
+    </style>
+</head>
+<body>
+<button class="print-btn" onclick="window.print()">&#8595; Download PDF</button>
+<div class="page" id="porto-content">
+
+    <!-- HEADER -->
+    <div class="header">
+        <img src="assets/roro.jpeg" alt="Roro Jasmine Setyoningsih" class="header-photo">
+        <div class="header-info">
+            <h1>RORO JASMINE SETYONINGSIH</h1>
+            <p class="role" id="porto-role"></p>
+            <div class="header-contacts">
+                <span><i class="fa-solid fa-envelope"></i> rorojasminesetyoningsih@gmail.com</span>
+                <span><i class="fa-solid fa-phone"></i> 0895-3592-55382</span>
+                <span><i class="fa-solid fa-location-dot"></i> <span id="porto-location"></span></span>
+                <a href="https://github.com/rorojasmine4" target="_blank"><i class="fa-brands fa-github"></i> github.com/rorojasmine4</a>
+                <a href="https://www.linkedin.com/in/rorojasmine4" target="_blank"><i class="fa-brands fa-linkedin"></i> linkedin.com/in/rorojasmine4</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ABOUT -->
+    <div class="section">
+        <div class="section-title" id="porto-about-title"></div>
+        <p class="about-text" id="porto-about-desc"></p>
+    </div>
+
+    <!-- PROJECTS -->
+    <div class="section">
+        <div class="section-title" id="porto-proj-title"></div>
+        <div class="projects-grid">
+            <div class="project-item">
+                <div class="project-name">MySems.my.id</div>
+                <p class="project-desc" id="porto-proj-1-desc"></p>
+                <p class="project-tech">Laravel · Bootstrap · MySQL · JavaScript</p>
+                <a class="project-link" href="https://mysems.my.id" target="_blank">mysems.my.id</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- EDUCATION -->
+    <div class="section">
+        <div class="section-title" id="porto-edu-title"></div>
+        <div class="edu-grid">
+            <div class="edu-item">
+                <div class="edu-school">S1 Universitas Bina Sarana Informatika</div>
+                <div class="edu-detail" id="porto-edu-2-major"></div>
+                <div class="edu-year">2024 – <span id="porto-present-1"></span></div>
+            </div>
+            <div class="edu-item">
+                <div class="edu-school">SMK Negeri 1 Karawang</div>
+                <div class="edu-detail" id="porto-edu-1-major"></div>
+                <div class="edu-year">2021 – 2024</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ORGANIZATION -->
+    <div class="section">
+        <div class="section-title" id="porto-org-title"></div>
+        <div class="org-grid" style="grid-template-columns: repeat(3, 1fr);">
+            <div class="org-item">
+                <div class="org-role" id="porto-org-2-role"></div>
+                <div class="org-place">BEM UBSI Karawang</div>
+                <div class="org-year">2024 – <span id="porto-present-2"></span></div>
+                <div class="org-desc" id="porto-org-2-desc"></div>
+            </div>
+            <div class="org-item">
+                <div class="org-role" id="porto-org-1-role"></div>
+                <div class="org-place">OSIS SMKN 1 Karawang</div>
+                <div class="org-year">2022 – 2023</div>
+                <div class="org-desc" id="porto-org-1-desc"></div>
+            </div>
+            <div class="org-item">
+                <div class="org-role">NENITSU – Nihon No Bukatsu</div>
+                <div class="org-place">SMKN 1 Karawang</div>
+                <div class="org-year">2022 – 2023</div>
+                <div class="org-desc" id="porto-org-3-desc"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WORK EXPERIENCE -->
+    <div class="section">
+        <div class="section-title" id="porto-exp-title"></div>
+        <div class="entry">
+            <div class="entry-header">
+                <div>
+                    <div class="entry-title" id="porto-intern-1-role"></div>
+                    <div class="entry-company">Kantor Imigrasi Kelas I Non TPI Karawang</div>
+                </div>
+                <span class="entry-period">Okt 2022 – Jan 2023</span>
+            </div>
+            <p class="entry-desc" id="porto-intern-1-desc"></p>
+        </div>
+        <div class="entry">
+            <div class="entry-header">
+                <div>
+                    <div class="entry-title" id="porto-intern-2-role"></div>
+                    <div class="entry-company">PT. TRIX Indonesia</div>
+                </div>
+                <span class="entry-period">Mar 2023 – Jun 2023</span>
+            </div>
+            <p class="entry-desc" id="porto-intern-2-desc"></p>
+        </div>
+    </div>
+
+    <!-- BOOTCAMP -->
+    <div class="section">
+        <div class="section-title" id="porto-bootcamp-title"></div>
+        <div class="entry">
+            <div class="entry-header">
+                <div>
+                    <div class="entry-title" id="porto-bootcamp-1-role"></div>
+                    <div class="entry-company">Perempuan Inovasi</div>
+                </div>
+                <span class="entry-period" id="porto-bootcamp-1-date"></span>
+            </div>
+            <p class="entry-desc" id="porto-bootcamp-1-desc"></p>
+        </div>
+    </div>
+
+    <!-- HARD SKILLS -->
+    <div class="section">
+        <div class="section-title" id="porto-hard-title"></div>
+        <div class="skills-grid">
+            <div class="skill-item">Web Design</div>
+            <div class="skill-item">Web Development</div>
+            <div class="skill-item">Office Administrative</div>
+            <div class="skill-item">Database Administration</div>
+            <div class="skill-item">System Analysis (UML/ERD)</div>
+            <div class="skill-item">UI/UX Design</div>
+        </div>
+    </div>
+
+    <!-- SOFT SKILLS -->
+    <div class="section">
+        <div class="section-title" id="porto-soft-title"></div>
+        <div class="skills-grid">
+            <div class="skill-item" id="porto-skill-s1"></div>
+            <div class="skill-item" id="porto-skill-s2"></div>
+            <div class="skill-item" id="porto-skill-s3"></div>
+            <div class="skill-item" id="porto-skill-s4"></div>
+            <div class="skill-item" id="porto-skill-s5"></div>
+            <div class="skill-item" id="porto-skill-s6"></div>
+        </div>
+    </div>
+
+    <!-- TOOLS -->
+    <div class="section">
+        <div class="section-title" id="porto-tools-title"></div>
+        <div class="tools-wrap">
+            <span class="tool-item">HTML</span>
+            <span class="tool-item">CSS</span>
+            <span class="tool-item">Bootstrap</span>
+            <span class="tool-item">JavaScript</span>
+            <span class="tool-item">PHP</span>
+            <span class="tool-item">Laravel</span>
+            <span class="tool-item">Python</span>
+            <span class="tool-item">MySQL</span>
+            <span class="tool-item">PhpMyAdmin</span>
+            <span class="tool-item">Figma</span>
+            <span class="tool-item">Draw.io</span>
+            <span class="tool-item">GitHub</span>
+            <span class="tool-item">Vercel</span>
+            <span class="tool-item">Google Cloud</span>
+            <span class="tool-item">Visual Studio Code</span>
+            <span class="tool-item">Laragon</span>
+            <span class="tool-item">Power BI</span>
+            <span class="tool-item">MS Word</span>
+            <span class="tool-item">MS Excel</span>
+            <span class="tool-item">MS PowerPoint</span>
+            <span class="tool-item">ChatGPT AI</span>
+            <span class="tool-item">Gemini AI</span>
+        </div>
+    </div>
+
+    <!-- CERTIFICATES -->
+    <div class="section">
+        <div class="section-title" id="porto-cert-title"></div>
+        <ul class="cert-list">
+            <li>
+                <span class="cert-name">Graphic Design Fundamental</span>
+                <span class="cert-date">17–27 Feb 2025</span>
+            </li>
+            <li>
+                <span class="cert-name">Dialog Perempuan Inovasi</span>
+                <span class="cert-date">8 <span id="porto-nov"></span> 2024</span>
+            </li>
+            <li>
+                <span class="cert-name">Product Development Bootcamp</span>
+                <span class="cert-date">2022</span>
+            </li>
+            <li>
+                <span class="cert-name">Database Administrator</span>
+                <span class="cert-date">6 <span id="porto-mar"></span> 2026</span>
+            </li>
+            <li>
+                <span class="cert-name">Workshop Laravel</span>
+                <span class="cert-date">31 <span id="porto-oct"></span> 2024</span>
+            </li>
+            <li>
+                <span class="cert-name">Webinar Media Kreatif</span>
+                <span class="cert-date">26 <span id="porto-oct2"></span> 2024</span>
+            </li>
+            <li>
+                <span class="cert-name">Data Competency</span>
+                <span class="cert-date">1 <span id="porto-jul"></span> 2025</span>
+            </li>
+            <li>
+                <span class="cert-name">Workshop ERD, LRS, UML</span>
+                <span class="cert-date">25 <span id="porto-jun"></span> 2025</span>
+            </li>
+            <li>
+                <span class="cert-name">UI/UX Arunika</span>
+                <span class="cert-date">6 <span id="porto-jun2"></span> 2026</span>
+            </li>
+        </ul>
+    </div>
+
+</div><!-- end .page -->
+
+<script>
+const translations = {
+    en: {
+        role: "Information Systems Student | Web Developer | Database Administrator",
+        location: "Karawang, West Java, Indonesia",
+        aboutTitle: "About Me",
+        aboutDesc: "I am an Information Systems undergraduate at Universitas Bina Sarana Informatika Karawang campus with a focus on technology integration and data management. I have real experience building digital platforms like MySems.my.id — a school event management system. Skilled in UML, ERD, LRD system design, Database Administration (DDL/DML), Laravel, HTML, CSS, Bootstrap, JavaScript, Python, and MySQL. I always strive to deliver structured, aesthetic, and reliable digital solutions.",
+        projTitle: "Projects",
+        proj1Desc: "A School Event Management System designed to simplify planning, coordination, and reporting for educational events. Supports event management with an intuitive dashboard, participant data management, and structured validation workflows.",
+        eduTitle: "Education",
+        edu2Major: "Information Systems",
+        edu1Major: "Software Engineering (Rekayasa Perangkat Lunak)",
+        present: "Present",
+        orgTitle: "Organizational Experience",
+        org2Role: "Secretary of Internal Affairs Department",
+        org2Desc: "Managed internal communications and coordinated departmental operations for the student government organization.",
+        org1Role: "Head of Noble Character & Moral Development Section",
+        org1Desc: "Led programs aimed at strengthening student character, ethics, and moral values through extracurricular activities.",
+        org3Desc: "Learned to write Hiragana, Katakana & Kanji and studied Japanese culture through extracurricular activities.",
+        expTitle: "Work Experience",
+        intern1Role: "Staff Intern – Kantor Imigrasi Kelas I Non TPI Karawang",
+        intern1Desc: "Staff Tata Usaha & Customer Service · Administrator · Entry Data · Input incoming letters and create outgoing letter numbers.",
+        intern2Role: "Office Intern – PT. TRIX Indonesia",
+        intern2Desc: "Office Welding division · Input spare part production quantity in Welding section for both NG and non-NG items.",
+        bootcampTitle: "Bootcamp",
+        bootcamp1Role: "Bootcamp Markoding – Perempuan Inovasi",
+        bootcamp1Date: "2022",
+        bootcamp1Desc: "Web development and UI/UX Design training using Figma, HTML, CSS & JavaScript. Created LEARNEMIA, an educational prototype about anemia management.",
+        hardTitle: "Hard Skills",
+        softTitle: "Soft Skills",
+        skillS1: "Communication",
+        skillS2: "Teamwork",
+        skillS3: "Leadership",
+        skillS4: "Time Management",
+        skillS5: "Problem Solving",
+        skillS6: "Adaptability",
+        toolsTitle: "Favorite Tools",
+        certTitle: "Certifications & Achievements",
+        nov: "Nov", mar: "Mar", oct: "Oct", jul: "Jul", jun: "Jun"
+    },
+    id: {
+        role: "Mahasiswi Sistem Informasi | Web Developer | Database Administrator",
+        location: "Karawang, Jawa Barat, Indonesia",
+        aboutTitle: "Tentang Saya",
+        aboutDesc: "Saya adalah mahasiswi S1 Sistem Informasi di Universitas Bina Sarana Informatika Kampus Karawang dengan fokus pada integrasi teknologi dan manajemen data. Saya memiliki pengalaman nyata dalam membangun platform digital seperti MySems.my.id — sebuah sistem manajemen acara sekolah. Mahir dalam perancangan diagram UML, ERD, LRD, Administrasi Basis Data (DDL/DML), Laravel, HTML, CSS, Bootstrap, JavaScript, Python, dan MySQL. Saya selalu berusaha menghadirkan solusi digital yang terstruktur, estetis, dan dapat diandalkan.",
+        projTitle: "Proyek",
+        proj1Desc: "School Event Management System yang dirancang untuk memudahkan perencanaan, koordinasi, dan pelaporan acara pendidikan. Mendukung pengelolaan kegiatan dengan dashboard intuitif, data manajemen peserta, dan proses validasi acara yang terstruktur.",
+        eduTitle: "Pendidikan",
+        edu2Major: "Sistem Informasi",
+        edu1Major: "Rekayasa Perangkat Lunak",
+        present: "Sekarang",
+        orgTitle: "Pengalaman Organisasi",
+        org2Role: "Sekretaris Departemen Dalam Negeri",
+        org2Desc: "Mengelola komunikasi internal dan koordinasi operasional departemen untuk organisasi mahasiswa.",
+        org1Role: "Ketua Seksi Pembinaan Budi Pekerti Luhur & Akhlak Mulia",
+        org1Desc: "Memimpin program yang memperkuat karakter, etika, dan nilai moral melalui kegiatan ekstrakurikuler.",
+        org3Desc: "Belajar menulis Hiragana, Katakana & Kanji serta mempelajari kebudayaan Jepang melalui kegiatan ekstrakurikuler.",
+        expTitle: "Pengalaman Kerja",
+        intern1Role: "Staff Magang – Kantor Imigrasi Kelas I Non TPI Karawang",
+        intern1Desc: "Staff Tata Usaha & Customer Service · Administrator · Entry Data · Menginput surat masuk serta membuat nomor surat keluar.",
+        intern2Role: "Office Intern – PT. TRIX Indonesia",
+        intern2Desc: "Bagian Office Welding · Menginput jumlah produksi sparepart di bagian Welding baik barang NG maupun tidak.",
+        bootcampTitle: "Bootcamp",
+        bootcamp1Role: "Bootcamp Markoding – Perempuan Inovasi",
+        bootcamp1Date: "2022",
+        bootcamp1Desc: "Pelatihan web development dan UI/UX Design menggunakan Figma, HTML, CSS & JavaScript. Membuat website LEARNEMIA yaitu prototype edukasi tentang penanganan anemia.",
+        hardTitle: "Hard Skills",
+        softTitle: "Soft Skills",
+        skillS1: "Komunikasi",
+        skillS2: "Kerja Tim",
+        skillS3: "Kepemimpinan",
+        skillS4: "Manajemen Waktu",
+        skillS5: "Pemecahan Masalah",
+        skillS6: "Adaptabilitas",
+        toolsTitle: "Alat Favorit",
+        certTitle: "Sertifikasi & Pencapaian",
+        nov: "Nov", mar: "Mar", oct: "Okt", jul: "Jul", jun: "Juni"
+    }
+};
+
+// Baca bahasa dari URL param (prioritas) lalu localStorage lalu browser
+const params = new URLSearchParams(window.location.search);
+const paramLang = params.get('lang');
+const storedLang = localStorage.getItem('portfolioLang');
+const lang = (paramLang === 'id' || paramLang === 'en')
+    ? paramLang
+    : (storedLang === 'id' || storedLang === 'en')
+        ? storedLang
+        : (navigator.language.startsWith('id') ? 'id' : 'en');
+
+const t = translations[lang] || translations['en'];
+
+document.documentElement.lang = lang;
+document.title = lang === 'id'
+    ? 'Portofolio – Roro Jasmine Setyoningsih'
+    : 'Portfolio – Roro Jasmine Setyoningsih';
+
+// Isi konten
+document.getElementById('porto-role').textContent          = t.role;
+document.getElementById('porto-location').textContent      = t.location;
+document.getElementById('porto-about-title').textContent   = t.aboutTitle;
+document.getElementById('porto-about-desc').textContent    = t.aboutDesc;
+document.getElementById('porto-proj-title').textContent    = t.projTitle;
+document.getElementById('porto-proj-1-desc').textContent   = t.proj1Desc;
+document.getElementById('porto-edu-title').textContent     = t.eduTitle;
+document.getElementById('porto-edu-2-major').textContent   = t.edu2Major;
+document.getElementById('porto-edu-1-major').textContent   = t.edu1Major;
+document.getElementById('porto-present-1').textContent     = t.present;
+document.getElementById('porto-org-title').textContent     = t.orgTitle;
+document.getElementById('porto-org-2-role').textContent    = t.org2Role;
+document.getElementById('porto-org-2-desc').textContent    = t.org2Desc;
+document.getElementById('porto-org-1-role').textContent    = t.org1Role;
+document.getElementById('porto-org-1-desc').textContent    = t.org1Desc;
+document.getElementById('porto-present-2').textContent     = t.present;
+document.getElementById('porto-org-3-desc').textContent    = t.org3Desc;
+document.getElementById('porto-exp-title').textContent     = t.expTitle;
+document.getElementById('porto-intern-1-role').textContent = t.intern1Role;
+document.getElementById('porto-intern-1-desc').textContent = t.intern1Desc;
+document.getElementById('porto-intern-2-role').textContent = t.intern2Role;
+document.getElementById('porto-intern-2-desc').textContent = t.intern2Desc;
+document.getElementById('porto-bootcamp-title').textContent = t.bootcampTitle;
+document.getElementById('porto-bootcamp-1-role').textContent = t.bootcamp1Role;
+document.getElementById('porto-bootcamp-1-date').textContent = t.bootcamp1Date;
+document.getElementById('porto-bootcamp-1-desc').textContent = t.bootcamp1Desc;
+document.getElementById('porto-hard-title').textContent    = t.hardTitle;
+document.getElementById('porto-soft-title').textContent    = t.softTitle;
+document.getElementById('porto-skill-s1').textContent      = t.skillS1;
+document.getElementById('porto-skill-s2').textContent      = t.skillS2;
+document.getElementById('porto-skill-s3').textContent      = t.skillS3;
+document.getElementById('porto-skill-s4').textContent      = t.skillS4;
+document.getElementById('porto-skill-s5').textContent      = t.skillS5;
+document.getElementById('porto-skill-s6').textContent      = t.skillS6;
+document.getElementById('porto-tools-title').textContent   = t.toolsTitle;
+document.getElementById('porto-cert-title').textContent    = t.certTitle;
+document.getElementById('porto-nov').textContent           = t.nov;
+document.getElementById('porto-mar').textContent           = t.mar;
+document.getElementById('porto-oct').textContent           = t.oct;
+document.getElementById('porto-oct2').textContent          = t.oct;
+document.getElementById('porto-jul').textContent           = t.jul;
+document.getElementById('porto-jun').textContent           = t.jun;
+document.getElementById('porto-jun2').textContent          = t.jun;
+</script>
+</body>
+</html>

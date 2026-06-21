@@ -1,581 +1,766 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Professional portfolio of Roro Jasmine Setyoningsih | IT Developer, UI/UX, and Database Administration." />
-    <meta name="theme-color" content="#d8a5c4" />
-    <title>Roro Jasmine Setyoningsih | Information Systems Specialist</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Professional portfolio of Roro Jasmine Setyoningsih | IT Developer, UI/UX, and Database Administration." />
+  <meta name="theme-color" content="#d8a5c4" />
+  <title>Roro Jasmine Setyoningsih | Information Systems Specialist</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-    <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <link rel="stylesheet" href="style.css" />
 
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/roro.jpeg" />
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/roro.jpeg" />
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/roro.jpeg" />
-    <link rel="icon" type="image/x-icon" href="assets/roro.jpeg" />
+  <link rel="icon" type="image/jpeg" href="assets/roro.jpeg" />
+  <link rel="apple-touch-icon" href="assets/roro.jpeg" />
 
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://rorojasminesetyoningsih.vercel.app/" />
-    <meta property="og:title" content="Roro Jasmine Setyoningsih | Information Systems Specialist" />
-    <meta property="og:description" content="Portfolio profesional Roro Jasmine Setyoningsih. Berpengalaman dalam pengembangan platform digital, manajemen basis data, dan analisis sistem informasi." />
-    <meta property="og:image" content="https://rorojasminesetyoningsih.vercel.app/assets/roro.jpeg" /> <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://rorojasminesetyoningsih.vercel.app/" />
-    <meta name="twitter:title" content="Roro Jasmine Setyoningsih | Information Systems Specialist" />
-    <meta name="twitter:description" content="Portfolio profesional Roro Jasmine Setyoningsih. Berpengalaman dalam pengembangan platform digital, manajemen basis data, dan analisis sistem informasi." />
-    <meta name="twitter:image" content="https://rorojasminesetyoningsih.vercel.app/assets/roro.jpeg" />
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://rorojasminesetyoningsih.vercel.app/" />
+  <meta property="og:title"       content="Roro Jasmine Setyoningsih | Information Systems Specialist" />
+  <meta property="og:description" content="Portfolio profesional Roro Jasmine Setyoningsih." />
+  <meta property="og:image"       content="https://rorojasminesetyoningsih.vercel.app/assets/roro.jpeg" />
+  <meta name="twitter:card"       content="summary_large_image" />
 </head>
 <body>
-    <header class="sticky-top shadow-sm bg-white">
-        <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
-            <div class="container">
-                <a class="navbar-brand fs-5 fw-bold text-pink" href="#home" data-i18n="nav-brand"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
-                        <li class="nav-item"><a class="nav-link active" href="#home" data-i18n="nav-home"></a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about" data-i18n="nav-about"></a></li>
-                        <li class="nav-item"><a class="nav-link" href="#projects" data-i18n="nav-projects"></a></li>
-                        <li class="nav-item"><a class="nav-link" href="#education" data-i18n="nav-education"></a></li>
-                        <li class="nav-item"><a class="nav-link" href="#skills" data-i18n="nav-skills"></a></li>
-                        <li class="nav-item"><a class="nav-link" href="#certificates" data-i18n="nav-certificates"></a></li>
-                        <li class="nav-item"><a class="nav-link" href="#tools" data-i18n="nav-tools"></a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact" data-i18n="nav-contact"></a></li>
-                        <li class="nav-item ms-3 d-flex align-items-center mt-3 mt-lg-0">
-                            <div class="btn-group" role="group">
-                                <button type="button" class="btn btn-outline-pink btn-sm active-lang" data-lang="en" data-i18n="lang-en"></button>
-                                <button type="button" class="btn btn-outline-pink btn-sm" data-lang="id" data-i18n="lang-id"></button>
-                            </div>
-                        </li>
-                        <li class="nav-item ms-3 mt-3 mt-lg-0 d-flex align-items-center">
-                            <button id="themeToggle" class="btn btn-outline-pink btn-sm me-2" aria-label="Toggle theme">
-                                <i class="fas fa-moon" id="themeIcon"></i>
-                                <span class="ms-2 d-none d-lg-inline" id="themeLabel">Dark</span>
-                            </button>
-                            <button id="shareButton" class="btn btn-outline-pink btn-sm text-pink">
-                                <i class="fas fa-share-alt me-2"></i><span data-i18n="share-button"></span>
-                            </button>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
 
-    <main>
-        <section id="home" class="hero-section py-5">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8 col-xl-7">
-                        <div class="text-center mb-4">
-                            <p class="text-uppercase text-muted letter-spacing mb-2" data-i18n="hero-tagline"></p>
-                            <h1 class="display-5 fw-bold mb-3" data-i18n="hero-name"></h1>
-                            <p class="lead text-secondary mb-5" data-i18n="hero-description"></p>
-                        </div>
-                        <div class="hero-card shadow-sm mx-auto mb-5">
-                            <img src="assets/roro.jpeg" alt="Profile" class="img-fluid" />
-                        </div>
-                        <div class="d-flex flex-column gap-3 justify-content-center align-items-center">
-                            <a href="assets/CV_RoroJasmine.pdf" class="btn btn-pink btn-lg w-100 w-md-auto" target="_blank" rel="noreferrer noopener">
-                                <i class="fas fa-download me-2"></i><span data-i18n="cta-download"></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="about" class="section-bg py-5">
-            <div class="container">
-                <div class="section-header text-center mb-5">
-                    <h2 class="fw-bold" data-i18n="about-title"></h2>
-                </div>
-                <div class="row align-items-center">
-                    <div class="col-lg-5 mb-4 mb-lg-0">
-                        <div class="card border-0 shadow-sm rounded-4 p-4 h-100">
-                            <p class="text-secondary" data-i18n="about-p1"></p>
-                            <p class="text-secondary" data-i18n="about-p2"></p>
-                            <p class="text-secondary mb-0" data-i18n="about-p3"></p>
-                        </div>
-                    </div>
-                    <div class="col-lg-7">
-                        <div class="row g-4">
-                            <div class="col-md-6">
-                                <div class="info-card p-4 rounded-4 shadow-sm h-100 bg-white">
-                                    <h3 class="h6 text-uppercase text-muted mb-3" data-i18n="focus-title"></h3>
-                                    <p class="mb-0 text-secondary" data-i18n="focus-text"></p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="info-card p-4 rounded-4 shadow-sm h-100 bg-white">
-                                    <h3 class="h6 text-uppercase text-muted mb-3" data-i18n="expertise-title"></h3>
-                                    <p class="mb-0 text-secondary" data-i18n="expertise-text"></p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="info-card p-4 rounded-4 shadow-sm h-100 bg-white">
-                                    <h3 class="h6 text-uppercase text-muted mb-3" data-i18n="database-title"></h3>
-                                    <p class="mb-0 text-secondary" data-i18n="database-text"></p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="info-card p-4 rounded-4 shadow-sm h-100 bg-white">
-                                    <h3 class="h6 text-uppercase text-muted mb-3" data-i18n="collaboration-title"></h3>
-                                    <p class="mb-0 text-secondary" data-i18n="collaboration-text"></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects" class="py-5">
-            <div class="container">
-                <div class="section-header text-center mb-5">
-                    <h2 class="fw-bold" data-i18n="projects-title"></h2>
-                    <p class="text-secondary mx-auto mb-0" style="max-width: 680px;" data-i18n="projects-description"></p>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-lg-10">
-                        <div class="card border-0 shadow-sm rounded-4 p-4 bg-white">
-                            <div class="row g-4 align-items-center">
-                                <div class="col-md-4 text-center">
-                                    <img src="assets/logo-dark.png" alt="MySEMS" class="img-fluid rounded-4"/>        
-                                </div>
-                                <div class="col-md-8">
-                                    <h3 class="h4 mb-2" data-i18n="project-name"></h3>
-                                    <p class="text-secondary mb-3" data-i18n="project-details"></p>
-                                    <div class="mb-3">
-                                        <span class="badge bg-light text-pink border border-pink me-2" data-i18n="tech-laravel"></span>
-                                        <span class="badge bg-light text-pink border border-pink me-2" data-i18n="tech-bootstrap"></span>
-                                        <span class="badge bg-light text-pink border border-pink me-2" data-i18n="tech-mysql"></span>
-                                        <span class="badge bg-light text-pink border border-pink" data-i18n="tech-js"></span>
-                                    </div>
-                                    <a href="https://mysems.my.id" class="btn btn-outline-pink btn-sm" target="_blank" rel="noreferrer noopener">
-                                        <i class="fas fa-external-link-alt me-2"></i><span data-i18n="project-button"></span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="education" class="section-bg py-5">
-            <div class="container">
-                <div class="section-header text-center mb-5">
-                    <h2 class="fw-bold" data-i18n="education-title"></h2>
-                    <p class="text-secondary mx-auto mb-0" style="max-width: 680px;" data-i18n="education-description"></p>
-                </div>
-                <div class="row justify-content-center g-4">
-                    <div class="col-md-6">
-                        <div class="timeline-card card border-0 shadow-sm rounded-4 p-4 bg-white h-100">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="timeline-dot bg-pink me-3"></div>
-                                <div>
-                                    <h3 class="h5 mb-1" data-i18n="edu-1-school"></h3>
-                                    <small class="text-muted" data-i18n="edu-1-date"></small>
-                                </div>
-                            </div>
-                            <p class="text-secondary mb-0" data-i18n="edu-1-desc"></p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="timeline-card card border-0 shadow-sm rounded-4 p-4 bg-white h-100">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="timeline-dot bg-pink me-3"></div>
-                                <div>
-                                    <h3 class="h5 mb-1" data-i18n="edu-2-school"></h3>
-                                    <small class="text-muted" data-i18n="edu-2-date"></small>
-                                </div>
-                            </div>
-                            <p class="text-secondary mb-0" data-i18n="edu-2-desc"></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="organization" class="section-bg py-5">
-            <div class="container">
-                <div class="section-header text-center mb-5">
-                    <h2 class="fw-bold" data-i18n="organization-title"></h2>
-                    <p class="text-secondary mx-auto mb-0" style="max-width: 680px;" data-i18n="organization-description"></p>
-                </div>
-                <div class="row justify-content-center g-4">
-                    <div class="col-md-6">
-                        <div class="timeline-card card border-0 shadow-sm rounded-4 p-4 bg-white h-100">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="timeline-dot bg-pink me-3"></div>
-                                <div>
-                                    <h3 class="h5 mb-1" data-i18n="org-1-role"></h3>
-                                    <small class="text-muted" data-i18n="org-1-date"></small>
-                                </div>
-                            </div>
-                            <p class="text-secondary mb-0" data-i18n="org-1-desc"></p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="timeline-card card border-0 shadow-sm rounded-4 p-4 bg-white h-100">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="timeline-dot bg-pink me-3"></div>
-                                <div>
-                                    <h3 class="h5 mb-1" data-i18n="org-2-role"></h3>
-                                    <small class="text-muted" data-i18n="org-2-date"></small>
-                                </div>
-                            </div>
-                            <p class="text-secondary mb-0" data-i18n="org-2-desc"></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="skills" class="py-5">
-            <div class="container">
-                <div class="section-header text-center mb-5">
-                    <h2 class="fw-bold" data-i18n="skills-title"></h2>
-                    <p class="text-secondary mx-auto mb-0" style="max-width: 680px;" data-i18n="skills-description"></p>
-                </div>
-                <div class="row g-4">
-                    <div class="col-md-6">
-                        <div class="card border-0 shadow-sm rounded-4 p-4 bg-white h-100">
-                            <h3 class="h5 text-pink mb-3" data-i18n="skills-hard"></h3>
-                            <ul class="list-unstyled mb-0">
-                                <li class="mb-2"><i class="fas fa-check-circle text-pink me-2"></i><span data-i18n="skill-h1"></span></li>
-                                <li class="mb-2"><i class="fas fa-check-circle text-pink me-2"></i><span data-i18n="skill-h2"></span></li>
-                                <li class="mb-2"><i class="fas fa-check-circle text-pink me-2"></i><span data-i18n="skill-h3"></span></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card border-0 shadow-sm rounded-4 p-4 bg-white h-100">
-                            <h3 class="h5 text-pink mb-3" data-i18n="skills-soft"></h3>
-                            <ul class="list-unstyled mb-0">
-                                <li class="mb-2"><i class="fas fa-check-circle text-pink me-2"></i><span data-i18n="skill-s1"></span></li>
-                                <li class="mb-2"><i class="fas fa-check-circle text-pink me-2"></i><span data-i18n="skill-s2"></span></li>
-                                <li class="mb-2"><i class="fas fa-check-circle text-pink me-2"></i><span data-i18n="skill-s3"></span></li>
-                                <li class="mb-2"><i class="fas fa-check-circle text-pink me-2"></i><span data-i18n="skill-s4"></span></li>
-                                <li class="mb-2"><i class="fas fa-check-circle text-pink me-2"></i><span data-i18n="skill-s5"></span></li>
-                                <li><i class="fas fa-check-circle text-pink me-2"></i><span data-i18n="skill-s6"></span></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="certificates" class="section-bg py-5">
+<!-- ═══════════════════════════════════════════ NAVBAR ═══ -->
+<header class="sticky-top">
+  <nav class="navbar navbar-expand-lg py-3" id="mainNav">
     <div class="container">
-        <div class="section-header text-center mb-5">
-            <h2 class="fw-bold" data-i18n="cert-title"></h2>
-            <p class="text-secondary mx-auto mb-0" style="max-width: 680px;" data-i18n="cert-description"></p>
+      <a class="navbar-brand fs-5 fw-bold" href="#home" data-i18n="nav-brand"></a>
+      <button class="navbar-toggler border-0" type="button"
+              data-bs-toggle="collapse" data-bs-target="#navbarContent"
+              aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link active" href="#home"         data-i18n="nav-home"></a></li>
+          <li class="nav-item"><a class="nav-link"        href="#about"        data-i18n="nav-about"></a></li>
+          <li class="nav-item"><a class="nav-link"        href="#projects"     data-i18n="nav-projects"></a></li>
+          <li class="nav-item"><a class="nav-link"        href="#education"    data-i18n="nav-education"></a></li>
+          <li class="nav-item"><a class="nav-link"        href="#organization" data-i18n="nav-organization"></a></li>
+          <li class="nav-item"><a class="nav-link"        href="#experience"   data-i18n="nav-experience"></a></li>
+          <li class="nav-item"><a class="nav-link"        href="#bootcamp"     data-i18n="nav-bootcamp"></a></li>
+          <li class="nav-item"><a class="nav-link"        href="#skills"       data-i18n="nav-skills"></a></li>
+          <li class="nav-item"><a class="nav-link"        href="#certificates" data-i18n="nav-certificates"></a></li>
+          <li class="nav-item"><a class="nav-link"        href="#tools"        data-i18n="nav-tools"></a></li>
+          <li class="nav-item"><a class="nav-link"        href="#contact"      data-i18n="nav-contact"></a></li>
+          <li class="nav-item ms-lg-3 d-flex align-items-center mt-3 mt-lg-0">
+            <div class="btn-group" role="group" aria-label="Language switcher">
+              <button type="button" class="btn btn-outline-pink btn-sm active-lang" data-lang="en" data-i18n="lang-en"></button>
+              <button type="button" class="btn btn-outline-pink btn-sm"             data-lang="id" data-i18n="lang-id"></button>
+            </div>
+          </li>
+          <li class="nav-item ms-lg-2 mt-3 mt-lg-0 d-flex align-items-center gap-2">
+            <button id="themeToggle" class="btn btn-outline-pink btn-sm" aria-label="Toggle theme" aria-pressed="false">
+              <i class="fas fa-moon" id="themeIcon"></i>
+              <span class="ms-1 d-none d-lg-inline" id="themeLabel">Dark</span>
+            </button>
+            <button id="shareButton" class="btn btn-outline-pink btn-sm">
+              <i class="fas fa-share-alt me-1"></i><span data-i18n="share-button"></span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+<!-- ═══════════════════════════════════════════ HERO ══════ -->
+<section id="home" class="hero-section">
+  <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+  <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
+  <div class="container hero-container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6 order-2 order-lg-1 hero-content">
+        <p class="text-uppercase hero-tagline letter-spacing mb-2" data-i18n="hero-tagline"></p>
+        <h1 class="display-5 fw-bold hero-name mb-3" data-i18n="hero-name"></h1>
+        <p id="typewriter-target" class="lead hero-typewriter mb-5"></p>
+        <div class="d-flex flex-wrap gap-3">
+          <a id="btn-download-cv"    href="format-cv.html?lang=en"    class="btn btn-pink btn-lg"         target="_blank" rel="noreferrer noopener">
+            <i class="fas fa-download me-2"></i><span data-i18n="cta-download"></span>
+          </a>
+          <a id="btn-download-porto" href="format-porto.html?lang=en" class="btn btn-outline-pink btn-lg" target="_blank" rel="noreferrer noopener">
+            <i class="fas fa-file-alt me-2"></i><span data-i18n="cta-download-porto"></span>
+          </a>
         </div>
+      </div>
+      <div class="col-lg-6 order-1 order-lg-2 d-flex flex-column align-items-center hero-photo-col">
+        <div class="hero-photo-wrapper">
+          <div class="hero-photo-ring">
+            <img src="assets/roro.jpeg" alt="Roro Jasmine Setyoningsih" class="hero-photo" />
+          </div>
+        </div>
+        <div class="hero-badge mt-4">
+          <i class="fas fa-graduation-cap text-pink"></i>
+          <span data-i18n="title-hero" ></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ ABOUT ═════ -->
+<section id="about" class="section-pad">
+  <div class="container">
+    <div class="section-header text-center">
+      <h2 class="fw-bold" data-i18n="about-title"></h2>
+    </div>
+    <div class="about-bento">
+      <!-- Bio — spans 4 cols -->
+      <div class="about-cell about-cell-bio">
+        <div class="card border-0 p-4 h-100">
+          <div class="d-flex align-items-center gap-3 mb-3">
+            <img src="assets/roro.jpeg" alt="Roro Jasmine" class="about-avatar rounded-circle" />
+            <div>
+              <h3 class="h5 fw-bold mb-0" style="color:var(--text-heading);">Roro Jasmine Setyoningsih</h3>
+              <small class="text-muted">Information Systems · UBSI Karawang</small>
+            </div>
+          </div>
+          <p class="text-secondary mb-2" data-i18n="about-p1"></p>
+          <p class="text-secondary mb-2" data-i18n="about-p2"></p>
+          <p class="text-secondary mb-0" data-i18n="about-p3"></p>
+        </div>
+      </div>
+      <!-- Cell: Focus -->
+      <div class="about-cell about-cell-sm">
+        <div class="info-card p-4 h-100">
+          <span class="info-card-emoji">🎯</span>
+          <h3 class="h6 text-uppercase text-muted mb-2 mt-2" data-i18n="focus-title"></h3>
+          <p class="mb-0 text-secondary" data-i18n="focus-text"></p>
+        </div>
+      </div>
+      <!-- Cell: Expertise -->
+      <div class="about-cell about-cell-sm">
+        <div class="info-card p-4 h-100">
+          <span class="info-card-emoji">⚡</span>
+          <h3 class="h6 text-uppercase text-muted mb-2 mt-2" data-i18n="expertise-title"></h3>
+          <p class="mb-0 text-secondary" data-i18n="expertise-text"></p>
+        </div>
+      </div>
+      <!-- Cell: Database -->
+      <div class="about-cell about-cell-sm">
+        <div class="info-card p-4 h-100">
+          <span class="info-card-emoji">🗄️</span>
+          <h3 class="h6 text-uppercase text-muted mb-2 mt-2" data-i18n="database-title"></h3>
+          <p class="mb-0 text-secondary" data-i18n="database-text"></p>
+        </div>
+      </div>
+      <!-- Cell: Collaboration -->
+      <div class="about-cell about-cell-sm">
+        <div class="info-card p-4 h-100">
+          <span class="info-card-emoji">🤝</span>
+          <h3 class="h6 text-uppercase text-muted mb-2 mt-2" data-i18n="collaboration-title"></h3>
+          <p class="mb-0 text-secondary" data-i18n="collaboration-text"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ PROJECTS ══ -->
+<section id="projects" class="section-pad section-alt">
+  <div class="container">
+    <div class="section-header text-center">
+      <h2 class="fw-bold" data-i18n="projects-title"></h2>
+      <p class="text-secondary mx-auto mb-0" style="max-width:660px;" data-i18n="projects-description"></p>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="project-card">
+          <div class="row g-0 align-items-stretch">
+            <div class="col-md-5 project-logo-col d-flex align-items-center justify-content-center p-4">
+              <img src="assets/logo-dark.png"    alt="MySEMS" class="img-fluid rounded-3 logo-light-mode" style="max-height:180px;" />
+              <img src="assets/logo-light.png"  alt="MySEMS" class="img-fluid rounded-3 logo-dark-mode"  style="max-height:180px;" />
+            </div>
+            <div class="col-md-7 p-4 d-flex flex-column justify-content-center">
+              <h3 class="h4 mb-2" data-i18n="project-name"></h3>
+              <p class="text-secondary mb-3" data-i18n="project-details"></p>
+              <div class="mb-3 d-flex flex-wrap gap-2">
+                <span class="badge tech-badge" data-i18n="tech-laravel"></span>
+                <span class="badge tech-badge" data-i18n="tech-bootstrap"></span>
+                <span class="badge tech-badge" data-i18n="tech-mysql"></span>
+                <span class="badge tech-badge" data-i18n="tech-js"></span>
+              </div>
+              <div>
+                <a href="https://mysems.my.id" class="btn btn-outline-pink btn-sm" target="_blank" rel="noreferrer noopener">
+                  <i class="fas fa-external-link-alt me-2"></i><span data-i18n="project-button"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ EDUCATION ═ -->
+<section id="education" class="section-pad">
+  <div class="container">
+    <div class="section-header text-center">
+      <h2 class="fw-bold" data-i18n="education-title"></h2>
+      <p class="text-secondary mx-auto mb-0" style="max-width:660px;" data-i18n="education-description"></p>
+    </div>
+    <div class="timeline-wrapper">
+      <div class="timeline-line d-none d-md-block" aria-hidden="true"></div>
+      <div class="row justify-content-center g-4">
+        <div class="col-md-5">
+          <div class="timeline-card card border-0 p-4 h-100">
+            <div class="timeline-accent-bar" aria-hidden="true"></div>
+            <div class="d-flex align-items-center mb-3 gap-3">
+              <div class="timeline-icon-box">
+                <i class="fas fa-school fs-5 text-pink"></i>
+              </div>
+              <div>
+                <h3 class="h5 mb-1" data-i18n="edu-1-school"></h3>
+                <small class="text-muted" data-i18n="edu-1-date"></small>
+              </div>
+            </div>
+            <p class="text-secondary mb-0" data-i18n="edu-1-desc"></p>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="timeline-card card border-0 p-4 h-100">
+            <div class="timeline-accent-bar" aria-hidden="true"></div>
+            <div class="d-flex align-items-center mb-3 gap-3">
+              <div class="timeline-icon-box">
+                <i class="fas fa-university fs-5 text-pink"></i>
+              </div>
+              <div>
+                <h3 class="h5 mb-1" data-i18n="edu-2-school"></h3>
+                <small class="text-muted" data-i18n="edu-2-date"></small>
+              </div>
+            </div>
+            <p class="text-secondary mb-0" data-i18n="edu-2-desc"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ ORGANIZATION -->
+<section id="organization" class="section-pad section-alt">
+  <div class="container">
+    <div class="section-header text-center">
+      <h2 class="fw-bold" data-i18n="organization-title"></h2>
+      <p class="text-secondary mx-auto mb-0" style="max-width:660px;" data-i18n="organization-description"></p>
+    </div>
+    <div class="row g-4">
+
+        <!-- NENITSU -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="exp-card position-relative h-100">
+          <div class="timeline-accent-bar" aria-hidden="true"></div>
+          <div class="p-4">
+            <span class="exp-badge"><i class="fas fa-star"></i> <span data-i18n="badge-extracurricular"></span></span>
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="timeline-icon-box">
+                <i class="fas fa-language fs-5 text-pink"></i>
+              </div>
+              <div>
+                <h3 class="h5 mb-1" data-i18n="org-3-role"></h3>
+                <small class="text-muted" data-i18n="org-3-date"></small>
+              </div>
+            </div>
+            <p class="text-secondary mb-0" data-i18n="org-3-desc"></p>
+          </div>
+          <div class="exp-gallery">
+            <div class="exp-gallery-item" data-src="assets/doc-fotos/nenitsu1.jpg"><img src="assets/doc-fotos/nenitsu1.jpg" alt="NENITSU" loading="lazy" /></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BEM UBSI Karawang -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="exp-card position-relative h-100">
+          <div class="timeline-accent-bar" aria-hidden="true"></div>
+          <div class="p-4">
+            <span class="exp-badge"><i class="fas fa-users"></i> <span data-i18n="badge-org"></span></span>
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="timeline-icon-box">
+                <i class="fas fa-landmark fs-5 text-pink"></i>
+              </div>
+              <div>
+                <h3 class="h5 mb-1" data-i18n="org-2-role"></h3>
+                <small class="text-muted" data-i18n="org-2-date"></small>
+              </div>
+            </div>
+            <p class="text-secondary mb-0" data-i18n="org-2-desc"></p>
+          </div>
+          <div class="exp-gallery">
+            <div class="exp-gallery-item" data-src="assets/doc-fotos/bem1.jpeg"><img src="assets/doc-fotos/bem1.jpeg" alt="BEM 1" loading="lazy" /></div>
+            <div class="exp-gallery-item" data-src="assets/doc-fotos/bem2.jpg"><img src="assets/doc-fotos/bem2.jpg" alt="BEM 2" loading="lazy" /></div>
+            <div class="exp-gallery-item" data-src="assets/doc-fotos/bem3.jpg"><img src="assets/doc-fotos/bem3.jpg" alt="BEM 3" loading="lazy" /></div>
+            <div class="exp-gallery-item" data-src="assets/doc-fotos/bem4.jpg"><img src="assets/doc-fotos/bem4.jpg" alt="BEM 4" loading="lazy" /></div>
+            <div class="exp-gallery-item" data-src="assets/doc-fotos/bem5.jpg"><img src="assets/doc-fotos/bem5.jpg" alt="BEM 5" loading="lazy" /></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- OSIS SMKN 1 Karawang -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="exp-card position-relative h-100">
+          <div class="timeline-accent-bar" aria-hidden="true"></div>
+          <div class="p-4">
+            <span class="exp-badge"><i class="fas fa-users"></i> <span data-i18n="badge-org"></span></span>
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="timeline-icon-box">
+                <i class="fas fa-graduation-cap fs-5 text-pink"></i>
+              </div>
+              <div>
+                <h3 class="h5 mb-1" data-i18n="org-1-role"></h3>
+                <small class="text-muted" data-i18n="org-1-date"></small>
+              </div>
+            </div>
+            <p class="text-secondary mb-0" data-i18n="org-1-desc"></p>
+          </div>
+          <div class="exp-gallery">
+            <div class="exp-gallery-item" data-src="assets/doc-fotos/osis1.jpg"><img src="assets/doc-fotos/osis1.jpg" alt="OSIS 1" loading="lazy" /></div>
+            <div class="exp-gallery-item" data-src="assets/doc-fotos/osis2.jpg"><img src="assets/doc-fotos/osis2.jpg" alt="OSIS 2" loading="lazy" /></div>
+            <div class="exp-gallery-item" data-src="assets/doc-fotos/osis3.jpg"><img src="assets/doc-fotos/osis3.jpg" alt="OSIS 3" loading="lazy" /></div>
+            <div class="exp-gallery-item" data-src="assets/doc-fotos/osis4.jpg"><img src="assets/doc-fotos/osis4.jpg" alt="OSIS 4" loading="lazy" /></div>
+            <div class="exp-gallery-item" data-src="assets/doc-fotos/osis5.jpg"><img src="assets/doc-fotos/osis5.jpg" alt="OSIS 5" loading="lazy" /></div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /row -->
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ EXPERIENCE ═ -->
+<section id="experience" class="section-pad">
+  <div class="container">
+    <div class="section-header text-center">
+      <h2 class="fw-bold" data-i18n="experience-title"></h2>
+      <p class="text-secondary mx-auto mb-0" style="max-width:660px;" data-i18n="experience-description"></p>
+    </div>
+    <div class="row g-4">
+
+
+      <!-- Magang Imigrasi -->
+      <div class="col-12 col-md-6">
+        <div class="exp-card position-relative h-100">
+          <div class="timeline-accent-bar" aria-hidden="true"></div>
+          <div class="p-4">
+            <span class="exp-badge"><i class="fas fa-briefcase"></i> <span data-i18n="badge-internship"></span></span>
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="timeline-icon-box">
+                <i class="fas fa-passport fs-5 text-pink"></i>
+              </div>
+              <div>
+                <h3 class="h5 mb-1" data-i18n="intern-1-role"></h3>
+                <small class="text-muted" data-i18n="intern-1-date"></small>
+              </div>
+            </div>
+            <p class="text-secondary mb-0" data-i18n="intern-1-desc"></p>
+          </div>
+          <div class="exp-gallery">
+            <div class="exp-gallery-item" data-src="assets/doc-fotos/imig1.jpg"><img src="assets/doc-fotos/imig1.jpg" alt="Imigrasi 1" loading="lazy" /></div>
+            <div class="exp-gallery-item" data-src="assets/doc-fotos/imig2.jpg"><img src="assets/doc-fotos/imig2.jpg" alt="Imigrasi 2" loading="lazy" /></div>
+            <div class="exp-gallery-item" data-src="assets/doc-fotos/imig3.jpg"><img src="assets/doc-fotos/imig3.jpg" alt="Imigrasi 3" loading="lazy" /></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Magang PT. TRIX Indonesia -->
+      <div class="col-12 col-md-6">
+        <div class="exp-card position-relative h-100">
+          <div class="timeline-accent-bar" aria-hidden="true"></div>
+          <div class="p-4">
+            <span class="exp-badge"><i class="fas fa-industry"></i> <span data-i18n="badge-internship"></span></span>
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="timeline-icon-box">
+                <i class="fas fa-industry fs-5 text-pink"></i>
+              </div>
+              <div>
+                <h3 class="h5 mb-1" data-i18n="intern-2-role"></h3>
+                <small class="text-muted" data-i18n="intern-2-date"></small>
+              </div>
+            </div>
+            <p class="text-secondary mb-0" data-i18n="intern-2-desc"></p>
+          </div>
+          <div class="exp-gallery">
+            <div class="exp-gallery-item" data-src="assets/doc-fotos/trix1.webp"><img src="assets/doc-fotos/trix1.webp" alt="TRIX 1" loading="lazy" /></div>
+            <div class="exp-gallery-item" data-src="assets/doc-fotos/trix2.jpg"><img src="assets/doc-fotos/trix2.jpg" alt="TRIX 2" loading="lazy" /></div>
+            <div class="exp-gallery-item" data-src="assets/doc-fotos/trix3.jpg"><img src="assets/doc-fotos/trix3.jpg" alt="TRIX 3" loading="lazy" /></div>
+            <div class="exp-gallery-item" data-src="assets/doc-fotos/trix4.jpg"><img src="assets/doc-fotos/trix4.jpg" alt="TRIX 4" loading="lazy" /></div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /row -->
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ BOOTCAMP ══ -->
+<section id="bootcamp" class="section-pad section-alt">
+  <div class="container">
+    <div class="section-header text-center">
+      <h2 class="fw-bold" data-i18n="bootcamp-title"></h2>
+      <p class="text-secondary mx-auto mb-0" style="max-width:660px;" data-i18n="bootcamp-description"></p>
+    </div>
+    <div class="row justify-content-center g-4">
+
+      <!-- Bootcamp Markoding -->
+      <div class="col-12 col-md-8 col-lg-6">
+        <div class="exp-card position-relative h-100">
+          <div class="timeline-accent-bar" aria-hidden="true"></div>
+          <div class="p-4">
+            <span class="exp-badge"><i class="fas fa-laptop-code"></i> Bootcamp</span>
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="timeline-icon-box">
+                <i class="fas fa-code fs-5 text-pink"></i>
+              </div>
+              <div>
+                <h3 class="h5 mb-1" data-i18n="bootcamp-1-role"></h3>
+                <small class="text-muted" data-i18n="bootcamp-1-date"></small>
+              </div>
+            </div>
+            <p class="text-secondary mb-0" data-i18n="bootcamp-1-desc"></p>
+          </div>
+          <div class="exp-gallery">
+            <div class="exp-gallery-item" data-src="assets/doc-fotos/bootcamp.png"><img src="assets/doc-fotos/bootcamp.png" alt="Bootcamp Markoding" loading="lazy" /></div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /row -->
+  </div>
+</section>
+
+<!-- Lightbox overlay (shared) -->
+<div class="exp-lightbox" id="expLightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="exp-lightbox-close" id="expLightboxClose" aria-label="Close"><i class="fas fa-times"></i></button>
+  <img src="" alt="Preview" id="expLightboxImg" />
+</div>
+
+<!-- ═══════════════════════════════════════════ SKILLS ════ -->
+<section id="skills" class="section-pad">
+  <div class="container">
+    <div class="section-header text-center">
+      <h2 class="fw-bold" data-i18n="skills-title"></h2>
+      <p class="text-secondary mx-auto mb-0" style="max-width:660px;" data-i18n="skills-description"></p>
+    </div>
+    <!-- Bento: Hard Skills col-md-8, Soft Skills col-md-4 -->
+    <div class="row g-4 align-items-stretch">
+      <div class="col-md-8">
+        <div class="card border-0 p-4 h-100">
+          <h3 class="h5 text-pink mb-4" data-i18n="skills-hard"></h3>
+          <div class="d-flex flex-wrap gap-2">
+            <span class="skill-pill" data-i18n="skill-h1"></span>
+            <span class="skill-pill" data-i18n="skill-h2"></span>
+            <span class="skill-pill" data-i18n="skill-h3"></span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card border-0 p-4 h-100">
+          <h3 class="h5 text-pink mb-4" data-i18n="skills-soft"></h3>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2"><i class="fas fa-check-circle text-pink me-2"></i><span data-i18n="skill-s1"></span></li>
+            <li class="mb-2"><i class="fas fa-check-circle text-pink me-2"></i><span data-i18n="skill-s2"></span></li>
+            <li class="mb-2"><i class="fas fa-check-circle text-pink me-2"></i><span data-i18n="skill-s3"></span></li>
+            <li class="mb-2"><i class="fas fa-check-circle text-pink me-2"></i><span data-i18n="skill-s4"></span></li>
+            <li class="mb-2"><i class="fas fa-check-circle text-pink me-2"></i><span data-i18n="skill-s5"></span></li>
+            <li>          <i class="fas fa-check-circle text-pink me-2"></i><span data-i18n="skill-s6"></span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ CERTIFICATES -->
+<section id="certificates" class="section-pad section-alt">
+  <div class="container">
+    <div class="section-header text-center">
+      <h2 class="fw-bold" data-i18n="cert-title"></h2>
+      <p class="text-secondary mx-auto mb-0" style="max-width:660px;" data-i18n="cert-description"></p>
+    </div>
+    <div class="row g-4">
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="assets/sertficate/1.png" target="_blank" rel="noreferrer noopener" class="cert-card d-flex flex-column h-100">
+          <div class="cert-img-wrap"><img src="assets/sertficate/1.png" alt="Graphic Design Fundamental" class="w-100" /><div class="cert-overlay"><i class="fas fa-expand-alt"></i></div></div>
+          <div class="cert-caption"><h3 class="h6 mb-1" data-i18n="cert-1-title"></h3><p class="mb-0 text-muted"><small data-i18n="cert-1-date"></small></p></div>
+        </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="assets/sertficate/2.png" target="_blank" rel="noreferrer noopener" class="cert-card d-flex flex-column h-100">
+          <div class="cert-img-wrap"><img src="assets/sertficate/2.png" alt="Dialog Perempuan Inovasi" class="w-100" /><div class="cert-overlay"><i class="fas fa-expand-alt"></i></div></div>
+          <div class="cert-caption"><h3 class="h6 mb-1" data-i18n="cert-2-title"></h3><p class="mb-0 text-muted"><small data-i18n="cert-2-date"></small></p></div>
+        </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="assets/sertficate/3.png" target="_blank" rel="noreferrer noopener" class="cert-card d-flex flex-column h-100">
+          <div class="cert-img-wrap"><img src="assets/sertficate/3.png" alt="Product Development Bootcamp" class="w-100" /><div class="cert-overlay"><i class="fas fa-expand-alt"></i></div></div>
+          <div class="cert-caption"><h3 class="h6 mb-1" data-i18n="cert-3-title"></h3><p class="mb-0 text-muted"><small data-i18n="cert-3-date"></small></p></div>
+        </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="assets/sertficate/4.png" target="_blank" rel="noreferrer noopener" class="cert-card d-flex flex-column h-100">
+          <div class="cert-img-wrap"><img src="assets/sertficate/4.png" alt="Database Administrator" class="w-100" /><div class="cert-overlay"><i class="fas fa-expand-alt"></i></div></div>
+          <div class="cert-caption"><h3 class="h6 mb-1" data-i18n="cert-4-title"></h3><p class="mb-0 text-muted"><small data-i18n="cert-4-date"></small></p></div>
+        </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="assets/sertficate/5.png" target="_blank" rel="noreferrer noopener" class="cert-card d-flex flex-column h-100">
+          <div class="cert-img-wrap"><img src="assets/sertficate/5.png" alt="Workshop Laravel" class="w-100" /><div class="cert-overlay"><i class="fas fa-expand-alt"></i></div></div>
+          <div class="cert-caption"><h3 class="h6 mb-1" data-i18n="cert-5-title"></h3><p class="mb-0 text-muted"><small data-i18n="cert-5-date"></small></p></div>
+        </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="assets/sertficate/6.png" target="_blank" rel="noreferrer noopener" class="cert-card d-flex flex-column h-100">
+          <div class="cert-img-wrap"><img src="assets/sertficate/6.png" alt="Webinar Media Kreatif" class="w-100" /><div class="cert-overlay"><i class="fas fa-expand-alt"></i></div></div>
+          <div class="cert-caption"><h3 class="h6 mb-1" data-i18n="cert-6-title"></h3><p class="mb-0 text-muted"><small data-i18n="cert-6-date"></small></p></div>
+        </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="assets/sertficate/7.png" target="_blank" rel="noreferrer noopener" class="cert-card d-flex flex-column h-100">
+          <div class="cert-img-wrap"><img src="assets/sertficate/7.png" alt="Data Competency" class="w-100" /><div class="cert-overlay"><i class="fas fa-expand-alt"></i></div></div>
+          <div class="cert-caption"><h3 class="h6 mb-1" data-i18n="cert-7-title"></h3><p class="mb-0 text-muted"><small data-i18n="cert-7-date"></small></p></div>
+        </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="assets/sertficate/8.png" target="_blank" rel="noreferrer noopener" class="cert-card d-flex flex-column h-100">
+          <div class="cert-img-wrap"><img src="assets/sertficate/8.png" alt="Workshop ERD, LRS, UML" class="w-100" /><div class="cert-overlay"><i class="fas fa-expand-alt"></i></div></div>
+          <div class="cert-caption"><h3 class="h6 mb-1" data-i18n="cert-8-title"></h3><p class="mb-0 text-muted"><small data-i18n="cert-8-date"></small></p></div>
+        </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="assets/sertficate/9.png" target="_blank" rel="noreferrer noopener" class="cert-card d-flex flex-column h-100">
+          <div class="cert-img-wrap"><img src="assets/sertficate/9.png" alt="UI/UX Arunika" class="w-100" /><div class="cert-overlay"><i class="fas fa-expand-alt"></i></div></div>
+          <div class="cert-caption"><h3 class="h6 mb-1" data-i18n="cert-9-title"></h3><p class="mb-0 text-muted"><small data-i18n="cert-9-date"></small></p></div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ TOOLS ═════ -->
+<section id="tools" class="section-pad">
+  <div class="container">
+    <div class="section-header text-center">
+      <h2 class="fw-bold" data-i18n="tools-title"></h2>
+      <p class="text-secondary mx-auto mb-0" style="max-width:660px;" data-i18n="tools-description"></p>
+    </div>
+    <div class="row g-3 align-items-stretch">
+      <!-- Featured: Figma — col-md-4 -->
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="tool-card tool-featured rounded-4 p-4 text-center h-100">
+          <i class="devicon-figma-plain colored tool-icon-lg mb-3 d-block"></i>
+          <p class="mb-0 fw-semibold" data-i18n="tool-figma"></p>
+        </div>
+      </div>
+      <!-- Featured: VS Code — col-md-4 -->
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="tool-card tool-featured rounded-4 p-4 text-center h-100">
+          <i class="devicon-vscode-plain colored tool-icon-lg mb-3 d-block"></i>
+          <p class="mb-0 fw-semibold" data-i18n="tool-vscode"></p>
+        </div>
+      </div>
+      <!-- Regular tools -->
+      <div class="col-6 col-sm-4 col-md-2 col-lg-2">
+        <div class="tool-card rounded-4 p-3 text-center h-100">
+          <i class="fas fa-server fs-3 text-pink mb-2 d-block"></i>
+          <p class="mb-0 small" data-i18n="tool-laragon"></p>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-2 col-lg-2">
+        <div class="tool-card rounded-4 p-3 text-center h-100">
+          <i class="fab fa-github fs-3 text-pink mb-2 d-block"></i>
+          <p class="mb-0 small" data-i18n="tool-github"></p>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-2 col-lg-2">
+        <div class="tool-card rounded-4 p-3 text-center h-100">
+          <i class="fas fa-rocket fs-3 text-pink mb-2 d-block"></i>
+          <p class="mb-0 small" data-i18n="tool-vercel"></p>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-2 col-lg-2">
+        <div class="tool-card rounded-4 p-3 text-center h-100">
+          <i class="devicon-googlecloud-plain colored fs-3 mb-2 d-block"></i>
+          <p class="mb-0 small" data-i18n="tool-gcp"></p>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-2 col-lg-2">
+        <div class="tool-card rounded-4 p-3 text-center h-100">
+          <i class="fas fa-project-diagram fs-3 text-pink mb-2 d-block"></i>
+          <p class="mb-0 small" data-i18n="tool-drawio"></p>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-2 col-lg-2">
+        <div class="tool-card rounded-4 p-3 text-center h-100">
+          <i class="fas fa-file-word fs-3 text-pink mb-2 d-block"></i>
+          <p class="mb-0 small" data-i18n="tool-word"></p>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-2 col-lg-2">
+        <div class="tool-card rounded-4 p-3 text-center h-100">
+          <i class="fas fa-file-excel fs-3 text-pink mb-2 d-block"></i>
+          <p class="mb-0 small" data-i18n="tool-excel"></p>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-2 col-lg-2">
+        <div class="tool-card rounded-4 p-3 text-center h-100">
+          <i class="fas fa-file-powerpoint fs-3 text-pink mb-2 d-block"></i>
+          <p class="mb-0 small" data-i18n="tool-ppt"></p>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-2 col-lg-2">
+        <div class="tool-card rounded-4 p-3 text-center h-100">
+          <i class="fas fa-chart-line fs-3 text-pink mb-2 d-block"></i>
+          <p class="mb-0 small" data-i18n="tool-powerbi"></p>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-2 col-lg-2">
+        <div class="tool-card rounded-4 p-3 text-center h-100">
+          <i class="devicon-html5-plain colored fs-3 mb-2 d-block"></i>
+          <p class="mb-0 small" data-i18n="tool-html"></p>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-2 col-lg-2">
+        <div class="tool-card rounded-4 p-3 text-center h-100">
+          <i class="devicon-css3-plain colored fs-3 mb-2 d-block"></i>
+          <p class="mb-0 small" data-i18n="tool-css"></p>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-2 col-lg-2">
+        <div class="tool-card rounded-4 p-3 text-center h-100">
+          <i class="devicon-bootstrap-plain colored fs-3 mb-2 d-block"></i>
+          <p class="mb-0 small" data-i18n="tool-bs"></p>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-2 col-lg-2">
+        <div class="tool-card rounded-4 p-3 text-center h-100">
+          <i class="devicon-javascript-plain colored fs-3 mb-2 d-block"></i>
+          <p class="mb-0 small" data-i18n="tool-js"></p>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-2 col-lg-2">
+        <div class="tool-card rounded-4 p-3 text-center h-100">
+          <i class="devicon-php-plain colored fs-3 mb-2 d-block"></i>
+          <p class="mb-0 small" data-i18n="tool-php"></p>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-2 col-lg-2">
+        <div class="tool-card rounded-4 p-3 text-center h-100">
+          <i class="devicon-laravel-original colored fs-3 mb-2 d-block"></i>
+          <p class="mb-0 small" data-i18n="tool-laravel"></p>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-2 col-lg-2">
+        <div class="tool-card rounded-4 p-3 text-center h-100">
+          <i class="devicon-python-plain colored fs-3 mb-2 d-block"></i>
+          <p class="mb-0 small" data-i18n="tool-python"></p>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-2 col-lg-2">
+        <div class="tool-card rounded-4 p-3 text-center h-100">
+          <i class="devicon-mysql-plain colored fs-3 mb-2 d-block"></i>
+          <p class="mb-0 small" data-i18n="tool-mysql"></p>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-2 col-lg-2">
+        <div class="tool-card rounded-4 p-3 text-center h-100">
+          <i class="fas fa-database fs-3 text-pink mb-2 d-block"></i>
+          <p class="mb-0 small" data-i18n="tool-phpmyadmin"></p>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-2 col-lg-2">
+        <div class="tool-card rounded-4 p-3 text-center h-100">
+          <i class="fas fa-robot fs-3 text-pink mb-2 d-block"></i>
+          <p class="mb-0 small" data-i18n="tool-chatgpt"></p>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-2 col-lg-2">
+        <div class="tool-card rounded-4 p-3 text-center h-100">
+          <i class="fas fa-brain fs-3 text-pink mb-2 d-block"></i>
+          <p class="mb-0 small" data-i18n="tool-gemini"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ CONTACT ═══ -->
+<section id="contact" class="section-pad section-alt">
+  <div class="container">
+    <div class="section-header text-center">
+      <h2 class="fw-bold" data-i18n="contact-title"></h2>
+      <p class="text-secondary mx-auto mb-0" style="max-width:660px;" data-i18n="contact-description"></p>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
         <div class="row g-4">
-            <div class="col-6 col-md-4 col-lg-3">
-                <a href="assets/sertficate/1.png" target="_blank" rel="noreferrer noopener" class="cert-card d-flex flex-column h-100 rounded-4 overflow-hidden shadow-sm">
-                    <img src="assets/sertficate/1.png" alt="Graphic Design Fundamental" class="img-fluid w-100" />
-                    <div class="cert-caption p-3 bg-white mt-auto">
-                        <h3 class="h6 mb-1" data-i18n="cert-1-title"></h3>
-                        <p class="mb-0 text-muted"><small data-i18n="cert-1-date"></small></p>
-                    </div>
-                </a>
+          <div class="col-md-6">
+            <div class="contact-item d-flex align-items-start gap-3">
+              <div class="contact-icon-box"><i class="fas fa-map-marker-alt"></i></div>
+              <div>
+                <h3 class="h6 mb-1" data-i18n="location-label"></h3>
+                <p class="mb-0 text-secondary" data-i18n="contact-loc-val"></p>
+              </div>
             </div>
-            <div class="col-6 col-md-4 col-lg-3">
-                <a href="assets/sertficate/2.png" target="_blank" rel="noreferrer noopener" class="cert-card d-flex flex-column h-100 rounded-4 overflow-hidden shadow-sm">
-                    <img src="assets/sertficate/2.png" alt="Dialog Perempuan Inovasi" class="img-fluid w-100" />
-                    <div class="cert-caption p-3 bg-white mt-auto">
-                        <h3 class="h6 mb-1" data-i18n="cert-2-title"></h3>
-                        <p class="mb-0 text-muted"><small data-i18n="cert-2-date"></small></p>
-                    </div>
-                </a>
+          </div>
+          <div class="col-md-6">
+            <div class="contact-item d-flex align-items-start gap-3">
+              <div class="contact-icon-box"><i class="fab fa-whatsapp"></i></div>
+              <div>
+                <h3 class="h6 mb-1" data-i18n="wa-label"></h3>
+                <p class="mb-0"><a href="https://wa.me/62895359255382" class="text-decoration-none" target="_blank" rel="noreferrer noopener" data-i18n="contact-wa-val"></a></p>
+              </div>
             </div>
-            <div class="col-6 col-md-4 col-lg-3">
-                <a href="assets/sertficate/3.png" target="_blank" rel="noreferrer noopener" class="cert-card d-flex flex-column h-100 rounded-4 overflow-hidden shadow-sm">
-                    <img src="assets/sertficate/3.png" alt="Product Development Bootcamp" class="img-fluid w-100" />
-                    <div class="cert-caption p-3 bg-white mt-auto">
-                        <h3 class="h6 mb-1" data-i18n="cert-3-title"></h3>
-                        <p class="mb-0 text-muted"><small data-i18n="cert-3-date"></small></p>
-                    </div>
-                </a>
+          </div>
+          <div class="col-md-6">
+            <div class="contact-item d-flex align-items-start gap-3">
+              <div class="contact-icon-box"><i class="fas fa-envelope"></i></div>
+              <div>
+                <h3 class="h6 mb-1" data-i18n="email-label"></h3>
+                <p class="mb-0"><a href="mailto:rorojasminesetyoningsih@gmail.com" class="text-decoration-none" data-i18n="contact-email-val"></a></p>
+              </div>
             </div>
-            <div class="col-6 col-md-4 col-lg-3">
-                <a href="assets/sertficate/4.png" target="_blank" rel="noreferrer noopener" class="cert-card d-flex flex-column h-100 rounded-4 overflow-hidden shadow-sm">
-                    <img src="assets/sertficate/4.png" alt="Database Administrator" class="img-fluid w-100" />
-                    <div class="cert-caption p-3 bg-white mt-auto">
-                        <h3 class="h6 mb-1" data-i18n="cert-4-title"></h3>
-                        <p class="mb-0 text-muted"><small data-i18n="cert-4-date"></small></p>
-                    </div>
-                </a>
+          </div>
+          <div class="col-md-6">
+            <div class="contact-item d-flex align-items-start gap-3">
+              <div class="contact-icon-box"><i class="fab fa-github"></i></div>
+              <div>
+                <h3 class="h6 mb-1" data-i18n="github-label"></h3>
+                <p class="mb-0"><a href="https://github.com/rorojasmine4" class="text-decoration-none" target="_blank" rel="noreferrer noopener" data-i18n="contact-github-val"></a></p>
+              </div>
             </div>
-            <div class="col-6 col-md-4 col-lg-3">
-                <a href="assets/sertficate/5.png" target="_blank" rel="noreferrer noopener" class="cert-card d-flex flex-column h-100 rounded-4 overflow-hidden shadow-sm">
-                    <img src="assets/sertficate/5.png" alt="Workshop Laravel" class="img-fluid w-100" />
-                    <div class="cert-caption p-3 bg-white mt-auto">
-                        <h3 class="h6 mb-1" data-i18n="cert-5-title"></h3>
-                        <p class="mb-0 text-muted"><small data-i18n="cert-5-date"></small></p>
-                    </div>
-                </a>
+          </div>
+          <div class="col-md-6">
+            <div class="contact-item d-flex align-items-start gap-3">
+              <div class="contact-icon-box"><i class="fab fa-linkedin-in"></i></div>
+              <div>
+                <h3 class="h6 mb-1" data-i18n="linkedin-label"></h3>
+                <p class="mb-0"><a href="https://www.linkedin.com/in/roro-jasmine-setyoningsih-a026bb415" class="text-decoration-none" target="_blank" rel="noreferrer noopener" data-i18n="contact-linkedin-val"></a></p>
+              </div>
             </div>
-            <div class="col-6 col-md-4 col-lg-3">
-                <a href="assets/sertficate/6.png" target="_blank" rel="noreferrer noopener" class="cert-card d-flex flex-column h-100 rounded-4 overflow-hidden shadow-sm">
-                    <img src="assets/sertficate/6.png" alt="Webinar Media Kreatif" class="img-fluid w-100" />
-                    <div class="cert-caption p-3 bg-white mt-auto">
-                        <h3 class="h6 mb-1" data-i18n="cert-6-title"></h3>
-                        <p class="mb-0 text-muted"><small data-i18n="cert-6-date"></small></p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3">
-                <a href="assets/sertficate/7.png" target="_blank" rel="noreferrer noopener" class="cert-card d-flex flex-column h-100 rounded-4 overflow-hidden shadow-sm">
-                    <img src="assets/sertficate/7.png" alt="Data Competency" class="img-fluid w-100" />
-                    <div class="cert-caption p-3 bg-white mt-auto">
-                        <h3 class="h6 mb-1" data-i18n="cert-7-title"></h3>
-                        <p class="mb-0 text-muted"><small data-i18n="cert-7-date"></small></p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3">
-                <a href="assets/sertficate/8.png" target="_blank" rel="noreferrer noopener" class="cert-card d-flex flex-column h-100 rounded-4 overflow-hidden shadow-sm">
-                    <img src="assets/sertficate/8.png" alt="Workshop ERD, LRS, UML" class="img-fluid w-100" />
-                    <div class="cert-caption p-3 bg-white mt-auto">
-                        <h3 class="h6 mb-1" data-i18n="cert-8-title"></h3>
-                        <p class="mb-0 text-muted"><small data-i18n="cert-8-date"></small></p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3">
-                <a href="assets/sertficate/9.png" target="_blank" rel="noreferrer noopener" class="cert-card d-flex flex-column h-100 rounded-4 overflow-hidden shadow-sm">
-                    <img src="assets/sertficate/9.png" alt="UI/UX Arunika" class="img-fluid w-100" />
-                    <div class="cert-caption p-3 bg-white mt-auto">
-                        <h3 class="h6 mb-1" data-i18n="cert-9-title"></h3>
-                        <p class="mb-0 text-muted"><small data-i18n="cert-9-date"></small></p>
-                    </div>
-                </a>
-            </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </section>
 
-        <section id="tools" class="py-5">
-    <div class="container">
-        <div class="section-header text-center mb-5">
-            <h2 class="fw-bold" data-i18n="tools-title"></h2>
-            <p class="text-secondary mx-auto mb-0" style="max-width: 680px;" data-i18n="tools-description"></p>
-        </div>
-        <div class="row g-3">
-            <div class="col-6 col-sm-4 col-md-3">
-                <div class="tool-card rounded-4 shadow-sm p-3 text-center bg-white h-100">
-                    <i class="devicon-figma-plain colored fs-2 mb-2"></i>
-                    <p class="mb-0" data-i18n="tool-figma"></p>
-                </div>
-            </div>
-            <div class="col-6 col-sm-4 col-md-3">
-                <div class="tool-card rounded-4 shadow-sm p-3 text-center bg-white h-100">
-                    <i class="devicon-vscode-plain colored fs-2 mb-2"></i>
-                    <p class="mb-0" data-i18n="tool-vscode"></p>
-                </div>
-            </div>
-            <div class="col-6 col-sm-4 col-md-3">
-                <div class="tool-card rounded-4 shadow-sm p-3 text-center bg-white h-100">
-                    <i class="fas fa-server fs-2 text-pink mb-2"></i>
-                    <p class="mb-0" data-i18n="tool-laragon"></p>
-                </div>
-            </div>
-            <div class="col-6 col-sm-4 col-md-3">
-                <div class="tool-card rounded-4 shadow-sm p-3 text-center bg-white h-100">
-                    <i class="devicon-github-original colored fs-2 mb-2"></i>
-                    <p class="mb-0" data-i18n="tool-github"></p>
-                </div>
-            </div>
-            <div class="col-6 col-sm-4 col-md-3">
-                <div class="tool-card rounded-4 shadow-sm p-3 text-center bg-white h-100">
-                    <i class="devicon-vercel-original colored fs-2 mb-2"></i>
-                    <p class="mb-0" data-i18n="tool-vercel"></p>
-                </div>
-            </div>
-            <div class="col-6 col-sm-4 col-md-3">
-                <div class="tool-card rounded-4 shadow-sm p-3 text-center bg-white h-100">
-                    <i class="devicon-googlecloud-plain colored fs-2 mb-2"></i>
-                    <p class="mb-0" data-i18n="tool-gcp"></p>
-                </div>
-            </div>
-            <div class="col-6 col-sm-4 col-md-3">
-                <div class="tool-card rounded-4 shadow-sm p-3 text-center bg-white h-100">
-                    <i class="fas fa-project-diagram fs-2 text-pink mb-2"></i>
-                    <p class="mb-0" data-i18n="tool-drawio"></p>
-                </div>
-            </div>
-            <div class="col-6 col-sm-4 col-md-3">
-                <div class="tool-card rounded-4 shadow-sm p-3 text-center bg-white h-100">
-                    <i class="fas fa-file-word fs-2 text-pink mb-2"></i>
-                    <p class="mb-0" data-i18n="tool-word"></p>
-                </div>
-            </div>
-            <div class="col-6 col-sm-4 col-md-3">
-                <div class="tool-card rounded-4 shadow-sm p-3 text-center bg-white h-100">
-                    <i class="fas fa-file-excel fs-2 text-pink mb-2"></i>
-                    <p class="mb-0" data-i18n="tool-excel"></p>
-                </div>
-            </div>
-            <div class="col-6 col-sm-4 col-md-3">
-                <div class="tool-card rounded-4 shadow-sm p-3 text-center bg-white h-100">
-                    <i class="fas fa-file-powerpoint fs-2 text-pink mb-2"></i>
-                    <p class="mb-0" data-i18n="tool-ppt"></p>
-                </div>
-            </div>
-            <div class="col-6 col-sm-4 col-md-3">
-                <div class="tool-card rounded-4 shadow-sm p-3 text-center bg-white h-100">
-                    <i class="fas fa-chart-line fs-2 text-pink mb-2"></i>
-                    <p class="mb-0" data-i18n="tool-powerbi"></p>
-                </div>
-            </div>
-            <div class="col-6 col-sm-4 col-md-3">
-                <div class="tool-card rounded-4 shadow-sm p-3 text-center bg-white h-100">
-                    <i class="devicon-html5-plain colored fs-2 mb-2"></i>
-                    <p class="mb-0" data-i18n="tool-html"></p>
-                </div>
-            </div>
-            <div class="col-6 col-sm-4 col-md-3">
-                <div class="tool-card rounded-4 shadow-sm p-3 text-center bg-white h-100">
-                    <i class="devicon-css3-plain colored fs-2 mb-2"></i>
-                    <p class="mb-0" data-i18n="tool-css"></p>
-                </div>
-            </div>
-            <div class="col-6 col-sm-4 col-md-3">
-                <div class="tool-card rounded-4 shadow-sm p-3 text-center bg-white h-100">
-                    <i class="devicon-bootstrap-plain colored fs-2 mb-2"></i>
-                    <p class="mb-0" data-i18n="tool-bs"></p>
-                </div>
-            </div>
-            <div class="col-6 col-sm-4 col-md-3">
-                <div class="tool-card rounded-4 shadow-sm p-3 text-center bg-white h-100">
-                    <i class="devicon-javascript-plain colored fs-2 mb-2"></i>
-                    <p class="mb-0" data-i18n="tool-js"></p>
-                </div>
-            </div>
-            <div class="col-6 col-sm-4 col-md-3">
-                <div class="tool-card rounded-4 shadow-sm p-3 text-center bg-white h-100">
-                    <i class="devicon-php-plain colored fs-2 mb-2"></i>
-                    <p class="mb-0" data-i18n="tool-php"></p>
-                </div>
-            </div>
-            <div class="col-6 col-sm-4 col-md-3">
-                <div class="tool-card rounded-4 shadow-sm p-3 text-center bg-white h-100">
-                    <i class="devicon-laravel-original colored fs-2 mb-2"></i>
-                    <p class="mb-0" data-i18n="tool-laravel"></p>
-                </div>
-            </div>
-            <div class="col-6 col-sm-4 col-md-3">
-                <div class="tool-card rounded-4 shadow-sm p-3 text-center bg-white h-100">
-                    <i class="devicon-python-plain colored fs-2 mb-2"></i>
-                    <p class="mb-0" data-i18n="tool-python"></p>
-                </div>
-            </div>
-            <div class="col-6 col-sm-4 col-md-3">
-                <div class="tool-card rounded-4 shadow-sm p-3 text-center bg-white h-100">
-                    <i class="devicon-mysql-plain colored fs-2 mb-2"></i>
-                    <p class="mb-0" data-i18n="tool-mysql"></p>
-                </div>
-            </div>
-            <div class="col-6 col-sm-4 col-md-3">
-                <div class="tool-card rounded-4 shadow-sm p-3 text-center bg-white h-100">
-                    <i class="fa-solid fa-sailboat fs-2 text-pink mb-2"></i>
-                    <p class="mb-0" data-i18n="tool-phpmyadmin"></p>
-                </div>
-            </div>
-            <div class="col-6 col-sm-4 col-md-3">
-                <div class="tool-card rounded-4 shadow-sm p-3 text-center bg-white h-100">
-                    <i class="fas fa-robot fs-2 text-pink mb-2"></i>
-                    <p class="mb-0" data-i18n="tool-chatgpt"></p>
-                </div>
-            </div>
-            <div class="col-6 col-sm-4 col-md-3">
-                <div class="tool-card rounded-4 shadow-sm p-3 text-center bg-white h-100">
-                    <i class="fas fa-brain fs-2 text-pink mb-2"></i>
-                    <p class="mb-0" data-i18n="tool-gemini"></p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+</main>
 
-        <section id="contact" class="py-5">
-            <div class="container">
-                <div class="section-header text-center mb-5">
-                    <h2 class="fw-bold" data-i18n="contact-title"></h2>
-                    <p class="text-secondary mx-auto mb-0" style="max-width: 680px;" data-i18n="contact-description"></p>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="card border-0 shadow-sm rounded-4 p-4 bg-white">
-                            <div class="row g-4">
-                                <div class="col-md-6">
-                                    <div class="contact-item d-flex align-items-start gap-3">
-                                        <div class="icon-box bg-pink text-white rounded-3 p-3"><i class="fas fa-map-marker-alt text-dark"></i></div>
-                                        <div>
-                                            <h3 class="h6 mb-1" data-i18n="location-label"></h3>
-                                            <p class="mb-0 text-secondary" data-i18n="contact-loc-val"></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="contact-item d-flex align-items-start gap-3">
-                                        <div class="icon-box bg-pink text-white rounded-3 p-3"><i class="fab fa-whatsapp text-dark"></i></div>
-                                        <div>
-                                            <h3 class="h6 mb-1" data-i18n="wa-label"></h3>
-                                            <p class="mb-0"><a href="https://wa.me/62895359255382" class="text-decoration-none text-secondary" target="_blank" rel="noreferrer noopener" data-i18n="contact-wa-val"></a></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="contact-item d-flex align-items-start gap-3">
-                                        <div class="icon-box bg-pink text-white rounded-3 p-3"><i class="fas fa-envelope text-dark"></i></div>
-                                        <div>
-                                            <h3 class="h6 mb-1" data-i18n="email-label"></h3>
-                                            <p class="mb-0"><a href="mailto:rorojasminesetyoningsih@gmail.com" class="text-decoration-none text-secondary" data-i18n="contact-email-val"></a></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="contact-item d-flex align-items-start gap-3">
-                                        <div class="icon-box bg-pink text-white rounded-3 p-3"><i class="fab fa-github text-dark"></i></div>
-                                        <div>
-                                            <h3 class="h6 mb-1" data-i18n="github-label"></h3>
-                                            <p class="mb-0"><a href="https://github.com/rorojasmine4" class="text-decoration-none text-secondary" target="_blank" rel="noreferrer noopener" data-i18n="contact-github-val"></a></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="contact-item d-flex align-items-start gap-3">
-                                        <div class="icon-box bg-pink text-white rounded-3 p-3"><i class="fab fa-linkedin-in text-dark"></i></div>
-                                        <div>
-                                            <h3 class="h6 mb-1" data-i18n="linkedin-label"></h3>
-                                            <p class="mb-0"><a href="https://www.linkedin.com/in/roro-jasmine-setyoningsih-a026bb415" class="text-decoration-none text-secondary" target="_blank" rel="noreferrer noopener" data-i18n="contact-linkedin-val"></a></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+<!-- ═══════════════════════════════════════════ FOOTER ════ -->
+<footer class="py-4">
+  <div class="container text-center">
+    <p class="mb-0" data-i18n="footer-text"></p>
+  </div>
+</footer>
 
-    <footer class="py-4 bg-white border-top">
-        <div class="container text-center">
-            <p class="mb-0 text-secondary" data-i18n="footer-text"></p>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="script.js"></script>
 </body>
 </html>
